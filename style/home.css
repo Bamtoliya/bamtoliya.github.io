@@ -1,4 +1,4 @@
-﻿header
+﻿.header
 {
 }
 
@@ -7,16 +7,16 @@ body
 {
 }
 
-title
+.title
 {
     text-align: center;
 
 }
 
-home
+.main
 {
 }
 
-footer
+.footer
 {
 }
