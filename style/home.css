@@ -22,10 +22,17 @@
 
 .main
 {
-    width: 800px;
+    width: 1080px;
     height: auto;
+    background-color: cornsilk;
 }
 
 .footer
+{
+    border-color: darkslategray;
+    border-top-width: 5px;
+}
+
+.list 
 {
 }
