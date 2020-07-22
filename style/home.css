@@ -1,5 +1,7 @@
 ﻿.header
 {
+    width:auto;
+    height:auto;
 }
 
 
@@ -12,11 +14,16 @@
 .title
 {
     text-align: center;
+    width: auto;
+    height: auto;
+
 
 }
 
 .main
 {
+    width: 800px;
+    height: auto;
 }
 
 .footer
