@@ -20,12 +20,6 @@
     margin: 0;
 }
 
-a:link 
-{
-    text-decoration: none;
-}
-
-
 .main
 {
     margin:auto;
@@ -34,14 +28,20 @@ a:link
     background-color: white;
 }
 
-.content
+.contentbox
 {
     display:inline-block;
     text-align: center;
-    width: 1080px;
+    width: inherit;
     height: 900px;
     background-color: cornsilk;
+}
 
+.content{
+    margin: auto;
+    width: 1080px;
+    height: inherit;
+    background-color: darkgreen;
 }
 
 .footer {
@@ -55,16 +55,29 @@ a:link
     display:block;
 }
 
-.list 
-{
+.sidelist {
     padding: 0;
     text-align: center;
     display: inline-block;
     width: 240px;
     height: 600px;
-    background-color:darkseagreen;
+    background-color: darkseagreen;
     margin: 0;
     text-decoration: none;
     font-size: 30px;
-    position:static;
+    position: fixed;
+}
 
+a:link {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:visited {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:hover{
+    color: black;
+}
