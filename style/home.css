@@ -14,25 +14,57 @@
 .title
 {
     text-align: center;
-    width: auto;
-    height: auto;
-
-
+    color: darkslategray;
+    font-weight: bold;
+    font-size: 60px;
+    margin: 0;
 }
+
+a:link 
+{
+    text-decoration: none;
+}
+
 
 .main
 {
-    width: 1080px;
-    height: auto;
-    background-color: cornsilk;
+    margin:auto;
+    width: 1600px;
+    height: 1080px;
+    background-color: white;
 }
 
-.footer
+.content
 {
-    border-color: darkslategray;
+    display:inline-block;
+    text-align: center;
+    width: 1080px;
+    height: 900px;
+    background-color: cornsilk;
+
+}
+
+.footer {
+    margin: auto;
+    margin-top: 20px;
+    width: 1200px;
+    border-top: solid;
     border-top-width: 5px;
+    border-color: darkslategray;
+    text-align: center;
+    display:block;
 }
 
 .list 
 {
-}
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    width: 240px;
+    height: 600px;
+    background-color:darkseagreen;
+    margin: 0;
+    text-decoration: none;
+    font-size: 30px;
+    position:static;
+
