@@ -64,8 +64,9 @@
     background-color: darkseagreen;
     margin: 0;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 50px;
     position: fixed;
+   
 }
 
 a:link {
@@ -80,4 +81,8 @@ a:visited {
 
 a:hover{
     color: black;
+}
+
+.list{
+    margin:0;
 }
