@@ -1,22 +1,14 @@
-﻿.header
-{
-    width:auto;
-    height:auto;
-}
-
-
-.background
-{
-    color:darkslategray;
-
-}
-
-.title
-{
-    text-align: center;
+﻿.header {
+    width: auto;
+    height: auto;
     color: darkslategray;
     font-weight: bold;
     font-size: 60px;
+    text-align: center;
+    
+}
+.title {
+    text-align: center;
     margin: 0;
 }
 
@@ -28,16 +20,39 @@
     background-color: white;
 }
 
-.contentbox
-{
-    display:inline-block;
-    text-align: center;
-    width: inherit;
-    height: 900px;
-    background-color: cornsilk;
+.navbox {
+    margin-left: 0px;
+    width: 240px;
+    height: 100%;
+    display: inline-block;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background-color:cadetblue;
+    z-index: 1; /* Stay on top */
+    top: 8px;
 }
 
-.content{
+.sidelist {
+    text-align: left;
+    font-size: 60px;
+    text-shadow: 2px 2px 2px black;
+    margin: 0px;
+}
+
+.contentbox {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 1080px;
+    height: 900px;
+    background-color: cornsilk;
+    position:relative;
+}
+
+.content {
+    display: inline-block;
     margin: auto;
     width: 1080px;
     height: inherit;
@@ -55,19 +70,7 @@
     display:block;
 }
 
-.sidelist {
-    padding: 0;
-    text-align: center;
-    display: inline-block;
-    width: 240px;
-    height: 600px;
-    background-color: darkseagreen;
-    margin: 0;
-    text-decoration: none;
-    font-size: 50px;
-    position: fixed;
-   
-}
+
 
 a:link {
     text-decoration: none;
@@ -85,4 +88,12 @@ a:hover{
 
 .list{
     margin:0;
+}
+.sidenav {
+    display: inline-block;
+    background-color: blue;
+    width: 200px;
+    height: 800px;
+    margin: 0;
+    position: sticky;
 }
