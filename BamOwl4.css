@@ -1,0 +1,327 @@
+body {
+    background-color: gainsboro;
+    color: black;
+    margin: 0;
+}
+
+header {
+    background-color: gainsboro;
+    width: 100%;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 6px solid darkslategrey;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+}
+
+/*SideNav Material*/
+.sideNavIcon {
+    width: 50px;
+    height: 50px;
+    margin-left: 6px;
+    margin-top: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: darkslategray;
+    margin: 8px;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.sideNavIcon:hover{
+    background-color: snow;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.sidenav {
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    z-index: 1;
+    top: 65px;
+    left: 0;
+    background-color: Darkgrey;
+    overflow-x: hidden;
+}
+
+    .sidenav a {
+        display: inline-block;
+        padding: 8px 8px 8px 8px;
+        margin-top: 5px;
+        color: Dimgray;
+        box-shadow: 2px 3px #888888;
+    }
+
+    .sidenav a:hover {
+        color: lightslategray;
+    }
+
+    .sidenav .closebtn {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+
+/*Main material*/
+.boardlink {
+    width: 200px;
+    display: inline-block;
+    height: auto;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 8px;
+    border: 1px solid darkslateGrey;
+    border-bottom: 3px solid darkSlateGrey;
+    border-right: 3px solid darkSlateGrey;
+    color: Dimgray;
+    text-align: center;
+    box-shadow: 2px 3px #888888;
+    overflow-x: hidden;
+    background-color: snow;
+}
+
+.show a:hover {
+    background-color: dimgray;
+    color: white;
+}
+
+.main-box{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+}
+.main-box2 {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 230px);
+    height: 1080px;
+    margin-left: 230px;
+}
+
+.main-box3 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 1080px;
+}
+
+.container{
+
+}
+
+.banner-box{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.banner-box1{
+    width: 50%;
+    float: left;
+    display: inline-block;
+    text-align: right;
+}
+
+.banner-box2 {
+    width: 50%;
+    display: inline-block;
+}
+
+
+.profile-box {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 30px;
+    position: relative;
+}
+
+    .profile-box button {
+        display: inline-block;
+        padding: 0px;
+        border: 0px;
+        cursor: pointer;
+    }
+
+.info-button {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-info-box {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+    .profile-info-box a {
+        color: black;
+        padding: 12px 12px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .profile-info-box a:hover {
+            background-color: #ddd
+        }
+
+.show {
+    display: block;
+}
+
+.profile-box img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+.board-preview {
+    width: 50%;
+    height: 30%;
+    display: inline-block;
+}
+
+.blog-preview {
+    width: 50%;
+    height: 30%;
+    display: inline-block;
+}
+
+
+
+.footer_info {
+    border-top: 6px solid darkslategray;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+}
+
+th {
+    text-align: center;
+    padding: 2px 5px 2px 5px;
+    border-right: 2px solid grey;
+}
+
+.title{
+    width: 65%;
+}
+
+.dateC{
+    width: 100px;
+}
+
+.board-box {
+    margin-left: 60px;
+    margin-right: 60px;
+    border-top: 3px solid darkslategrey;
+    border-bottom: 3px solid darkslategrey;
+    padding-top: 2px;
+    width: 1080px;
+}
+
+td {
+    border-top: 2px solid grey;
+    text-align: left;
+    padding: 2px 5px 2px 5px;
+    border-right: 2px solid grey;
+}
+
+.category-box{
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 30px; 
+    margin-bottom: 50px;
+}
+
+.box{
+    width: 1080px;
+    margin: auto;
+}
+
+.under-box{
+    
+}
+
+.create-button {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 2px;
+    display: inline-block;
+}
+    .create-button button {
+        margin-left: 60px;
+        font-size: 15px;
+        background-color: darkslategray;
+        color: white;
+    }
+
+.page-box {
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 2px;
+    width: 200px;
+    height: 15px;
+    border: 2px solid darkslategrey;
+    display: inline-block;
+}
+
+
+
+
+

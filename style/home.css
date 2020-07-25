@@ -20,18 +20,72 @@
     background-color: white;
 }
 
+.sidenav {
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    z-index: 1;
+    top: 65px;
+    left: 0;
+    background-color: Darkgrey;
+    overflow-x: hidden;
+}
+    .sidenav a {
+        display: inline-block;
+        padding: 8px 8px 8px 8px;
+        margin-top: 5px;
+        color: Dimgray;
+        box-shadow: 2px 3px #888888;
+    }
+
+        .sidenav a:hover {
+            color: lightslategray;
+        }
+
+    .sidenav .closebtn {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
 .navbox {
-    margin-left: 0px;
     width: 240px;
     height: 100%;
     display: inline-block;
-    position: fixed;
-    padding: 0;
-    margin: 0;
+    position:relative;
+    padding: 0;    
     background-color:cadetblue;
     z-index: 1; /* Stay on top */
-    top: 8px;
+    float: left;
+    
 }
+
+.sideNavIcon {
+    width: 50px;
+    height: 50px;
+    margin-left: 6px;
+    margin-top: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    .sideNavIcon:hover {
+        background-color: snow;
+    }
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: darkslategray;
+    margin: 8px;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
 
 .sidelist {
     text-align: left;
@@ -59,15 +113,11 @@
     background-color: darkgreen;
 }
 
-.footer {
-    margin: auto;
-    margin-top: 20px;
-    width: 1200px;
-    border-top: solid;
-    border-top-width: 5px;
-    border-color: darkslategray;
+.footer_info {
+    border-top: 6px solid darkslategray;
+    padding: 20px;
     text-align: center;
-    display:block;
+    font-weight: 600;
 }
 
 
