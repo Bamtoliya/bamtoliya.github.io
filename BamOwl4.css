@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: gainsboro;
     color: black;
@@ -28,6 +32,43 @@ header {
     font-size: 20px;
     font-weight: bold;
     border-bottom: 6px solid darkslategrey;
+}
+.topnav input[type=text] {
+    float: right;
+    border: none;
+    padding: 6px;
+    font-size: 17px;
+}
+.topnav .search-container {
+    margin-top: 16px;
+    margin-right: 20px;
+    float: right;
+}
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    background: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+    .topnav .search-container button:hover {
+        background: #ccc;
+    }
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
 }
 
 p {
