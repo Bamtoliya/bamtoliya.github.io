@@ -43,7 +43,7 @@
             </div>
             <div id="mySideList" class="hidden">
                 {% for item in site.data.navigation %}
-                    <a class="boardlink" href="{{item.link}}" {% if page.url == itme.link %} style="color: red;" {% endif %}>
+                    <a class="boardlink" href="{{item.link}}" {% if page.url == item.link %} style="color: cadetblue;" {% endif %}>
                         {{item.name}}
                     </a>
                 {% endfor %}

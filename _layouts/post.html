@@ -3,6 +3,33 @@ layout: default
 ---
 
 
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-{{content}}
+    <div class="article_box">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="title">{{ page.title }}</td>
+                    <td class="dateC">{{ page.date | date_to_string }}</td>
+                    <td class="author">{{page.author}}</td>
+                </tr>
+            </tbody>
+        </table>
+        {{content}}
+    </div>
+
+    <section class="button-box">
+        <div class="PageNavigation">
+            {% if page.previous.url %}
+            {{page.previous.title}}</a>
+            <a href="{{page.previous.url}}">
+                <button class="previous">Previous</button>
+            </a>
+            {% endif %}
+            {% if page.next.url %}
+            <a href="{{page.next.url}}">
+                <button class="previous">Next</button>
+            </a>
+            {{page.next.title}}
+            {% endif %}
+        </div>
+
+    </section>

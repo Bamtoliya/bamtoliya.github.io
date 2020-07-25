@@ -234,54 +234,51 @@ p {
     font-weight: 600;
 }
 
-table {
-    width: 100%;
+.articlebox {
+    width: 1000px;
     padding-left: 60px;
     padding-right: 60px;
-    text-align: left;
+    margin: auto;
+    border: 2px solid grey;
+    
 }
 
-th {
-    text-align: center;
-    padding: 2px 5px 2px 5px;
-    border-right: 2px solid grey;
-}
-
-.title{
+.title {
     width: 65%;
+    overflow: hidden;
+}
+
+table {
+    left: 20px;
+    right: 20px;
+    width: 100%;
+    
+}
+
+.article_number{
+    width: 30px;
+    
 }
 
 .dateC{
-    width: 100px;
+    width: 200px;
 }
 
-.board-box {
-    margin-left: 60px;
-    margin-right: 60px;
-    border-top: 3px solid darkslategrey;
-    border-bottom: 3px solid darkslategrey;
-    padding-top: 2px;
-    width: 1080px;
+.date{
+    padding-left: 20px;
+    font-size: 10px;
 }
 
 td {
-    border-top: 2px solid grey;
+    border: 2px solid grey;
     text-align: left;
-    padding: 2px 5px 2px 5px;
-    border-right: 2px solid grey;
-}
-
-.category-box{
-    font-weight: 600;
-    font-size: 40px;
-    margin-top: 30px;
-    margin-left: 30px; 
-    margin-bottom: 50px;
-}
-
-.box{
-    width: 1080px;
+    padding-left: 10px;
+    padding-top: 5px;
     margin: auto;
+}
+
+.article{
+    width: 1080px;
 }
 
 .content-box{
@@ -289,15 +286,29 @@ td {
     margin: auto;
 }
 
-.previous{
-    float: left;
+.previous {
+    margin-top:40px;
+    display: inline-block;
+    width: 100px;
+    padding: 4px;
 }
 
-.next{
-    float: right;
+.next {
+    margin-top: 40px;
+    display: inline-block;
+    width: 100px;
+    padding: 4px;
 }
 
+.button-box{
+    width: 1080px;
+    margin: auto;
+    text-align: center;
+}
 
-
-
-
+.PageNavigation {
+    font-size: 12px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
