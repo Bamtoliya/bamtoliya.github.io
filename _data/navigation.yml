@@ -7,5 +7,8 @@
 - name: Blog
   link: /blog
 
+- name: Game
+  link: /game
+
 - name: Dev
   link: /dev
