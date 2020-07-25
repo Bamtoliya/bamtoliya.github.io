@@ -2,11 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\blog",
-    "\\img",
-    "\\javascript",
-    "\\style",
-    "\\view"
+    "\\_posts"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\index.markdown",
   "PreviewInSolutionExplorer": false
 }

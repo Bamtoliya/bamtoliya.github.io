@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 
-<script src="javascript\BamOwlScript.js"></script>
+<script src="/assets/js/BamOwlScript.js"></script>
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="BamOwl4.css">
+    <link rel="stylesheet" href="/assets/css/BamOwl4.css">
     <title>BamOwl</title>
 </head>
 
@@ -20,7 +20,7 @@
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div><!-- 메뉴 아이콘 -->
-                <a href="index.html"><img src="img\BamOwl(DarkSlateGray).gif" style="width:150px"></a><!-- 홈페이지 로고 및 링크-->
+                <a href="{{site.data.navigation[0].link}}"><img src="/assets/img/BamOwl(DarkSlateGray).gif" style="width:150px" name="home"></a><!-- 홈페이지 로고 및 링크-->
                 <div class="search-container">
                     <input type="text" placeholder="Search..">
                     <button type="submit"><i class="fa fa-search"></i></button>
@@ -42,34 +42,18 @@
                 </div>
             </div>
             <div id="mySideList" class="hidden">
-                <a class="boardlink" href="index.html">Home</a>
-                <a class="boardlink" href="portfolio.html">Portfolio</a>
-                <a class="boardlink" href="blog.html">blog</a>
-                <a class="boardlink" href="#">list #3</a>
-                <a class="boardlink" href="#">list #4</a>
+                {% for item in site.data.navigation %}
+                    <a class="boardlink" href="{{item.link}}" {% if page.url == itme.link %} style="color: red;" {% endif %}>
+                        {{item.name}}
+                    </a>
+                {% endfor %}
             </div>
         </div>
     </section><!--SideNavgation-->
 
     <section id="main" class="main-box">
-        <section class="banner">
-            <div class="banner-box1">
-                <a href="https://twitch.tv/bamtoliya">
-                    <img src="img\Twitch_Purple_RGB.gif" />
-                </a>
-            </div><!--Twitch banner and link-->
-            <div class="banner-box2">
-                <a href="https://www.youtube.com/channel/UCxLKxVXG1lG3YLZTctRybng">
-                    <img src="img\Youtube-Banner.gif" />
-                </a>
-
-            </div><!--Youtube banner and link-->
-        </section>
-        <section class="introduction">
-            <p>This website built for personal portfolio and blog.</p>
-            <p>이 웹사이트는 개인 블로그와 포트폴리오 용도로 만들어졌습니다.</p>
-        </section>
-
+        
+    {{content}}
 
 
     </section><!--ContentBox-->
