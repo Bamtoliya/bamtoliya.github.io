@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaplestoryOTFBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: gainsboro;
     color: black;
     margin: 0;
+    font-family: Recipekorea;
 }
 
 header {
@@ -71,6 +86,7 @@ p {
     left: 0;
     background-color: Darkgrey;
     overflow-x: hidden;
+    font: 'Recipekorea', arial, sans-serif;
 }
 
     .sidenav a {
@@ -162,79 +178,13 @@ p {
     display: inline-block;
 }
 
-
-.profile-box {
-    display: inline-block;
-    float: right;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 30px;
-    position: relative;
+.introduction {
+    text-align: center;
 }
-
-    .profile-box button {
-        display: inline-block;
-        padding: 0px;
-        border: 0px;
-        cursor: pointer;
-    }
-
-.info-button {
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.profile-info-box {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 200px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 0;
-    z-index: 1;
-}
-
-    .profile-info-box a {
-        color: black;
-        padding: 12px 12px;
-        text-decoration: none;
-        display: block;
-    }
-
-        .profile-info-box a:hover {
-            background-color: #ddd
-        }
 
 .show {
     display: block;
 }
-
-.profile-box img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-
-
-.board-preview {
-    width: 50%;
-    height: 30%;
-    display: inline-block;
-}
-
-.blog-preview {
-    width: 50%;
-    height: 30%;
-    display: inline-block;
-}
-
-
 
 .footer_info {
     border-top: 6px solid darkslategray;
@@ -296,19 +246,6 @@ td {
 .under-box{
     
 }
-
-.create-button {
-    margin-left: 60px;
-    margin-right: 60px;
-    padding-top: 2px;
-    display: inline-block;
-}
-    .create-button button {
-        margin-left: 60px;
-        font-size: 15px;
-        background-color: darkslategray;
-        color: white;
-    }
 
 .page-box {
     margin-top: 10px;

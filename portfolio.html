@@ -1,44 +1,79 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<script src="javascript\BamOwlScript.js">
-    sidenav();
-</script>
+
+<script src="javascript\BamOwlScript.js"></script>
+
 <head>
-
-    <link rel="stylesheet" type="text/css" href="style\home.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="BamOwl4.css">
+    <title>BamOwl</title>
 </head>
-<body style="background-color:cornsilk">
 
+<body>
+    <header>
+        <p>
+            <div class="sideNavIcon" onclick="sideNav(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div><!-- 메뉴 아이콘 -->
+            <a href="index.html"><img src="img\BamOwl(DarkSlateGray).gif" style="width:150px"></a><!-- 홈페이지 로고 및 링크-->
 
+        </p>
+    </header>
 
-    <div class="main">
-        <header class="header">
-            <a href="index.html">
-                <span>BamOwl</span>
-            </a>
-        </header>
-
-
-        <nav class="sidelist">
-            <a href="index.html"><p class="list">Home</p></a>
-            <a href="portfolio.html"><p class="list">Portfolio</p></a>
-            <a href="blog.html"><p class="list">Blog</p></a>
-        </nav>
-
-        <section>
-            <div class="contentbox">
-                <div class="content">
-                    <h1 style="margin: 5px 0px 0px 0px">This is portfolio page</h1>
+    <section>
+        <div id="mySidenav">
+            <div href="javascript:void(0)" class="hidden">
+                <div class="sideNavIcon">
+                    <div class="closebtn">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </div>
             </div>
+            <div id="mySideList" class="hidden">
+                <a class="boardlink" href="index.html">Home</a>
+                <a class="boardlink" href="portfolio.html">Portfolio</a>
+                <a class="boardlink" href="blog.html">blog</a>
+                <a class="boardlink" href="#">list #3</a>
+                <a class="boardlink" href="#">list #4</a>
+            </div>
+        </div>
+    </section><!--SideNavgation-->
+
+    <section id="main" class="main-box">
+        <section class="banner">
+            <div class="banner-box1">
+                <a href="https://twitch.tv/bamtoliya">
+                    <img src="img\Twitch_Purple_RGB.gif" />
+                </a>
+            </div><!--Twitch banner and link-->
+            <div class="banner-box2">
+                <a href="https://www.youtube.com/channel/UCxLKxVXG1lG3YLZTctRybng">
+                    <img src="img\Youtube-Banner.gif" />
+                </a>
+
+            </div><!--Youtube banner and link-->
         </section>
-        
+        <section class="introduction">
+            <p>This website built for personal portfolio and blog.</p>
+            <p>이 웹사이트는 개인 블로그와 포트폴리오 용도로 만들어졌습니다.</p>
+        </section>
+
+
+
+    </section><!--ContentBox-->
+
+
+    <p style="margin-top:15px;" class="top"></p>
+    <div class="footer_info">
+        <p>© 2020 BamOwl</p>
+        Email: bamtoliya@gmail.com
     </div>
-
-
-    <div class="footer">
-        Bamtoliya
-    </div>
-
 </body>
+
 </html>
