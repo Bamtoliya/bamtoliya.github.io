@@ -5,9 +5,10 @@ layout: default
 
 <h1>Latest Posts</h1>
 
-<ul>
+<ul style="list-style:none;">
   {% for post in site.posts %}
     <li>
+	<p></p>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p>
     </li>
