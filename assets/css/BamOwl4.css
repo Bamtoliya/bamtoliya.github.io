@@ -289,6 +289,13 @@ td {
     margin: auto;
 }
 
+.previous{
+    float: left;
+}
+
+.next{
+    float: right;
+}
 
 
 
