@@ -1,9 +1,9 @@
 ---
-title: BamOwl Dev
+title: BamOwl Game
 layout: default
 ---
 
-<h1>Dev: Latest Posts</h1>
+<h1>Game: Latest Posts</h1>
 
 <ul style="list-style:none;">
   {% for post in site.posts %}

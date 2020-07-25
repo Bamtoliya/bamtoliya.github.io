@@ -57,3 +57,9 @@ plugins:
 
 
 permalink: /:categories/:title
+
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [search.html]
