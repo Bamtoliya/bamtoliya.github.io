@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\blog",
-    "\\_posts"
+    "\\assets",
+    "\\_data",
+    "\\_layouts",
+    "\\_posts",
+    "\\_posts\\blog",
+    "\\_posts\\portfolio"
   ],
-  "SelectedNode": "\\index.markdown",
+  "SelectedNode": "\\_layouts\\default.html",
   "PreviewInSolutionExplorer": false
 }
