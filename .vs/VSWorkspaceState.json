@@ -2,12 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\_data",
-    "\\_layouts",
-    "\\_posts",
-    "\\_posts\\blog",
-    "\\_posts\\portfolio"
+    "\\assets\\css",
+    "\\assets\\js"
   ],
-  "SelectedNode": "\\_layouts\\default.html",
+  "SelectedNode": "\\portfolio.markdown",
   "PreviewInSolutionExplorer": false
 }
