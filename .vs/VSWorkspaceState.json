@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\css",
-    "\\assets\\js"
+    "\\assets\\js",
+    "\\_posts",
+    "\\_posts\\blog"
   ],
-  "SelectedNode": "\\portfolio.markdown",
+  "SelectedNode": "\\_posts\\blog\\2020-07-26-안녕하세요.md",
   "PreviewInSolutionExplorer": false
 }
