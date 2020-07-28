@@ -245,8 +245,9 @@ p {
 
 .articlebox img {
     display: block;
-    text-align: center;
-    margin: auto;
+    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
