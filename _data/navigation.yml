@@ -12,3 +12,9 @@
 
 - name: Dev
   link: /dev
+
+- name: Twitch
+  link: /twitch
+
+- name: Youtube
+  link: /youtube
