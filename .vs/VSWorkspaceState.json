@@ -1,10 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
+    "\\assets\\img",
+    "\\assets\\img\\blog",
     "\\_data",
     "\\_posts",
     "\\_posts\\blog"
   ],
-  "SelectedNode": "\\youtube.markdown",
+  "SelectedNode": "\\assets\\img\\blog\\2020-07-28 070334.png",
   "PreviewInSolutionExplorer": false
 }
