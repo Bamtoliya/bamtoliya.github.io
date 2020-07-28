@@ -243,6 +243,11 @@ p {
     
 }
 
+.articlebox img{
+    display: block;
+    text-align: center;
+}
+
 .title {
     width: 65%;
     overflow: hidden;
