@@ -243,10 +243,13 @@ p {
     
 }
 
-.articlebox img{
+.articlebox img {
     display: block;
     text-align: center;
+    margin: auto;
 }
+
+
 
 .title {
     width: 65%;
@@ -290,6 +293,12 @@ td {
     width: 1080px;
     margin: auto;
 }
+
+    .content-box img {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
 
 .previous {
     margin-top:40px;
