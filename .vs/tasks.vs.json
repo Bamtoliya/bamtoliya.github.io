@@ -5,6 +5,11 @@
       "taskLabel": "task-index",
       "appliesTo": "index.markdown",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-2020-07-26-안녕하세요",
+      "appliesTo": "_posts/blog/2020-07-26-안녕하세요.md",
+      "type": "launch"
     }
   ]
 }
