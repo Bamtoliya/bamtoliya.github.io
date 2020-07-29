@@ -31,12 +31,12 @@
                     <div class="bar3"></div>
                 </div><!-- 메뉴 아이콘 -->
                 <a href="{{site.data.navigation[0].link}}"><img src="/assets/img/BamOwl(DarkSlateGray).gif" style="width:150px" name="home"></a><!-- 홈페이지 로고 및 링크-->
-                <form action="/search" class="search-container">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" name="q" placeholder="Search.." pattern=".{1,}" title="At least 1 characters" required>
-                </form>
-                
-
+                <div class="search-container">
+                    <form action="/search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" name="q" placeholder="Search.." pattern=".{1,}" title="At least 1 characters" required>
+                    </form>
+                </div>
             </div>
         </p>
     </header>
