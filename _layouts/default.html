@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/BamOwl4.css">
     <title>BamOwl</title>
+
+    <!-- tipuesearch -->
+    <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -21,10 +31,13 @@
                     <div class="bar3"></div>
                 </div><!-- 메뉴 아이콘 -->
                 <a href="{{site.data.navigation[0].link}}"><img src="/assets/img/BamOwl(DarkSlateGray).gif" style="width:150px" name="home"></a><!-- 홈페이지 로고 및 링크-->
-                <div class="search-container">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </div>
+                <form action="/search">
+                    <div class="search-container">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" name="q" placeholder="Search.." pattern=".{1,}" title="At least 1 characters" required>
+                    </div>
+                </form>
+                
 
             </div>
         </p>

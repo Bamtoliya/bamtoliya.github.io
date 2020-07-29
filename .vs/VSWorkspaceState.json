@@ -2,12 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\img",
+    "\\assets\\css",
     "\\assets\\img\\blog",
-    "\\_data",
+    "\\_layouts",
     "\\_posts",
-    "\\_posts\\blog"
+    "\\_posts\\blog",
+    "\\_posts\\dev"
   ],
-  "SelectedNode": "\\assets\\img\\blog\\2020-07-28 070334.png",
+  "SelectedNode": "\\_posts\\blog\\2020-07-28-새 책상구입.md",
   "PreviewInSolutionExplorer": false
 }
