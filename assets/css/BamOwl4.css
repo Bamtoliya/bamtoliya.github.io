@@ -179,14 +179,16 @@ p {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 1080px;
+    min-height: 1080px;
+    max-height: auto;
     overflow: hidden;
 }
 .main-box2 {
     position: relative;
     display: inline-block;
     width: calc(100% - 230px);
-    height: 1080px;
+    min-height: 1080px;
+    max-height: none;
     margin-left: 230px;
 }
 
@@ -194,7 +196,8 @@ p {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 1080px;
+    min-height: 1080px;
+    max-height:none;
 }
 
 .container{
