@@ -5,12 +5,11 @@
     "\\assets\\css",
     "\\assets\\img",
     "\\assets\\img\\blog",
-    "\\assets\\tipuesearch\\css",
     "\\_layouts",
     "\\_posts",
     "\\_posts\\blog",
     "\\_posts\\dev"
   ],
-  "SelectedNode": "\\assets\\css\\BamOwl4.css",
+  "SelectedNode": "\\_layouts\\default.html",
   "PreviewInSolutionExplorer": false
 }
