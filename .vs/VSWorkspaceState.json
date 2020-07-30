@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\assets\\css",
     "\\assets\\img",
     "\\assets\\img\\blog",
-    "\\assets\\tipuesearch",
     "\\assets\\tipuesearch\\css",
     "\\_layouts",
     "\\_posts",
     "\\_posts\\blog",
     "\\_posts\\dev"
   ],
-  "SelectedNode": "\\assets\\img\\blog\\20200729_202818.jpg",
+  "SelectedNode": "\\assets\\css\\BamOwl4.css",
   "PreviewInSolutionExplorer": false
 }

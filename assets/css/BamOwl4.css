@@ -180,7 +180,7 @@ p {
     display: inline-block;
     width: 100%;
     min-height: 1080px;
-    max-height: auto;
+    max-height: none;
     overflow: hidden;
 }
 .main-box2 {
