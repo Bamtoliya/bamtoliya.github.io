@@ -299,10 +299,12 @@ td {
     margin: auto;
 }
 
-    .content-box img {
+    .content-box .img {
         display: block;
         text-align: center;
         margin: auto;
+        max-width: 800px;
+        height: auto;
     }
 
 .previous {
