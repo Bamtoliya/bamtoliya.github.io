@@ -246,7 +246,7 @@ p {
     
 }
 
-.articlebox img {
+.articlebox .img {
     display: block;
     margin-left: auto;
     margin-right: auto;
