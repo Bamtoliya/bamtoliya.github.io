@@ -3,12 +3,13 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\img\\blog",
+    "\\assets\\tipuesearch",
+    "\\assets\\tipuesearch\\css",
     "\\_layouts",
     "\\_posts",
     "\\_posts\\blog",
     "\\_posts\\dev"
   ],
-  "SelectedNode": "\\_posts\\blog\\2020-07-28-새 책상구입.md",
+  "SelectedNode": "\\assets\\tipuesearch\\tipuesearch_content.js",
   "PreviewInSolutionExplorer": false
 }
