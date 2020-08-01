@@ -307,6 +307,10 @@ td {
         height: auto;
     }
 
+    .content-box .p{
+        width: 600px;
+    }
+
 .previous {
     margin-top:40px;
     display: inline-block;
