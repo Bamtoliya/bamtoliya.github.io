@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css",
-    "\\_data",
-    "\\_includes",
-    "\\_layouts",
+    "\\assets\\img",
+    "\\assets\\img\\blog",
     "\\_posts",
     "\\_posts\\blog",
     "\\_posts\\dev",
-    "\\_posts\\game"
+    "\\_posts\\game",
+    "\\_posts\\portfolio",
+    "\\_posts\\twitch"
   ],
-  "SelectedNode": "\\dev.markdown",
+  "SelectedNode": "\\_posts\\portfolio\\2020-08-15-[3D]대나무.md",
   "PreviewInSolutionExplorer": false
 }
