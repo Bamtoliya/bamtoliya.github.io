@@ -355,4 +355,5 @@ td {
     max-height: 300px;
     background-color: blue;
     display:inline-block;
+    margin: auto;
 }
