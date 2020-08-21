@@ -350,7 +350,6 @@ td {
 
 .portfolio-container .portfolioImg{
     width: 50%;
-    max-width: 50%;
     height: auto;
     max-height: 400px;
     background-color: blue;
