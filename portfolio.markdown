@@ -11,7 +11,7 @@ layout: default
 <div class="portfolioImg">
 </div>
 <div class="portfolioImg">
-<img src="" >
+<img src="" class="portfolioImg">
 </div>
 <div class="portfolioImg">
 </div>
