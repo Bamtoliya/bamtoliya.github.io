@@ -6,12 +6,12 @@ layout: default
 
 <section class="portfolio-container">
 <div class="portfolioImg">
-<img src="" class="portfolioImg">
+<img src="" >
 </div>
 <div class="portfolioImg">
 </div>
 <div class="portfolioImg">
-<img src="" class="portfolioImg">
+<img src="" >
 </div>
 <div class="portfolioImg">
 </div>

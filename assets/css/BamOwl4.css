@@ -350,8 +350,7 @@ td {
 }
 
 .portfolio-container .portfolioImg{
-    width: 50%;
-    height: auto;
+    width: 40%;
     min-height: 300px;
     height: auto;
     max-height: 400px;
