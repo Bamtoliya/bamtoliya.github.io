@@ -344,4 +344,14 @@ td {
     height: 900px;
     margin: auto;
     background-color: cornsilk;
+    padding: 30px;
+
+}
+
+.portfolio-container .portfolioImg{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 300px;
+    background: red;
 }
