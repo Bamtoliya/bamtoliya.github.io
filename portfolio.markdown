@@ -6,7 +6,7 @@ layout: default
 
 <section class="portfolio-container">
 <div class="portfolioImg">
-<img src="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}" >
+<img src="" >
 </div>
 <div class="portfolioImg">
 </div>
