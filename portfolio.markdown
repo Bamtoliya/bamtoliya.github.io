@@ -26,7 +26,7 @@ layout: default
 <div class="portfolioImg">
 </div>
 
-
+<!--Need magnifyig on hover the image to maximize the image size regarless the other content and showed the abstract under the image.-->
 
 
 </section>

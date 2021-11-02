@@ -19,3 +19,6 @@ function sideNav(x) {
     var element3 = document.getElementById("main");
     element3.classList.toggle("main-box2");
 }
+
+function hoverImage() {
+}

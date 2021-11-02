@@ -355,7 +355,7 @@ td {
         height: auto;
         min-height: 300px;
         max-height: 400px;
-        background-color: blue;
+        background-color: rgb(83, 97, 90);
         display: inline-flex;
         margin: auto;
     }

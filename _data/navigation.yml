@@ -10,6 +10,9 @@
 - name: Game
   link: /game
 
+- name: Study
+  link: /study
+
 - name: Dev
   link: /dev
 
