@@ -2,7 +2,7 @@
 layout: post
 title:  UNITY Long PROJECT
 date:   2023-05-14
-category: portfolio
+category: dev
 tag: portfolio, 포트폴리오, Academy, 학교, 수업
 ---
 
