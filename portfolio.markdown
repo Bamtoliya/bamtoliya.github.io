@@ -6,7 +6,7 @@ layout: default
 
 <section class="portfolio-container">
 <div class="portfolioImg">
-    <img src="assets/img/portfolio/format.png" >
+    <img src="assets/img/portfolio/image1.jpg" >
 </div>
 <div class="portfolioImg">
     <img src="assets/img/portfolio/format.png" >
