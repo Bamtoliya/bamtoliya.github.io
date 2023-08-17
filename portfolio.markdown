@@ -6,26 +6,28 @@ layout: default
 
 <section class="portfolio-container">
 <div class="portfolioImg">
-<img src="assets/img/portfolio/img1.jpg">
+    <img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
-<img src="assets/img/portfolio/format.jpg" >
+    <img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
-<img src="assets/img/portfolio/format.jpg" >
+    <img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
-    <img src="assets/img/portfolio/format.jpg" >
+    <img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
-<img src="assets/img/portfolio/format.jpg" >
+    <img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
+<img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
-<img src="assets/img/portfolio/format.jpg" >
+<img src="assets/img/portfolio/format.png" >
 </div>
 <div class="portfolioImg">
+<img src="assets/img/portfolio/format.png" >
 </div>
 
 <!--Need magnifyig on hover the image to maximize the image size regarless the other content and showed the abstract under the image.-->

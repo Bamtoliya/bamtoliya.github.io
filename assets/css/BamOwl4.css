@@ -356,7 +356,8 @@ td {
         min-height: 300px;
         max-height: 400px;
         background-color: rgb(83, 97, 90);
-        display: inline-flex;
         margin: auto;
-        overflow: hidden;
     }
+        .portfolioImg > img {
+            object-fit: scale-down;
+        }
