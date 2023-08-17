@@ -358,4 +358,5 @@ td {
         background-color: rgb(83, 97, 90);
         display: inline-flex;
         margin: auto;
+        overflow: auto;
     }
