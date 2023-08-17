@@ -5,22 +5,25 @@ layout: default
 
 
 <section class="portfolio-container">
-<img src="assets/img/portfolio/img1.jpg" class="portfolioImg">
 <div class="portfolioImg">
-<img src="assets/img/portfolio/img3.jpg" >
+<img src="assets/img/portfolio/img1.jpg">
 </div>
 <div class="portfolioImg">
-<img src="assets/img/portfolio/img2.jpg" >
+<img src="assets/img/portfolio/format.jpg" >
+</div>
+<div class="portfolioImg">
+<img src="assets/img/portfolio/format.jpg" >
+</div>
+<div class="portfolioImg">
+    <img src="assets/img/portfolio/format.jpg" >
+</div>
+<div class="portfolioImg">
+<img src="assets/img/portfolio/format.jpg" >
 </div>
 <div class="portfolioImg">
 </div>
 <div class="portfolioImg">
-<img src="" >
-</div>
-<div class="portfolioImg">
-</div>
-<div class="portfolioImg">
-<img src="" >
+<img src="assets/img/portfolio/format.jpg" >
 </div>
 <div class="portfolioImg">
 </div>
