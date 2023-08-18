@@ -358,7 +358,7 @@ td {
         background-color: rgb(83, 97, 90);
         margin: auto;
     }
-        .portfolioImgBox > .portfolioImg {
+        .portfolioImg {
             object-fit: scale-down;
         }
 

@@ -32,7 +32,7 @@ Personal Projects:
 
 BamOwl.com
 <div class="portfolioImgBox">
-    <img class="portfolioImg"src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
+    <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
     <a href="">detail<a>
 </div>
 
