@@ -9,31 +9,22 @@ layout: default
 <!--Need magnifyig on hover the image to maximize the image size regarless the other content and showed the abstract under the image.-->
 
 
-<p class="about-me">
-    About Me:    
-</p>
+<h1 class="about-me"> About Me:</h1>
 <p class="">안녕하세요!</p>
 <p>현재는 게임 플레이 프로그래머를 경험하고 있습니다..</p>
 <p>궁극적으로는 게임 엔진프로그래머가 되기위해서 공부하고 있습니다.</p>
 
-<p class="skills">Skills:</p>
-
-<p class=>Main:</p>
-    <p>주로 사용하는 언어로는</p>
-    <p>C, C++, C#</p>
-
-    Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, ReactJS, Node.JS, ExpressJS, 
-
-<p>
-Personal Projects:
-<br>
-개인적으로 진행한 프로젝트들 입니다.
-</p>
+<h1 class="skills">Skills:</h1>
+<span><p>Main: C, C++, C#</p><span>
+<span><p>Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, ReactJS, Node.JS, ExpressJS</p><span>
+    
+<bar></bar>
+<h1>Personal Projects:</h1>
 
 BamOwl.com
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
-    <p style="float:right" href="">detail</p>
+    <span><a style="float:right" href="">detail</a></span>
 </div>
 
 <div class="portfolioImgBox">
@@ -41,28 +32,27 @@ BamOwl.com
 </div>
 
 
-Team Projects:
-
-팀으로써 진행해봤던 프로젝트들 입니다.
-    Fetch
+<h1>Team Projects:</h1>
+    <h2>Fetch</h2>
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
 </div>
 
-    Unity Short Project(Capstone)
+<h2>Unity Short Project(Capstone)</h2>
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/format.png" alt =  "assets/img/portfolio/format.png">
 </div>
 
-    Unity Project(Capstone)
+<h2>Unity Project(Capstone)</h2>
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/format.png" >
 </div>
 
-Academic Projects:
-진행한 학교과제들 중 흥미로웠던 프로젝트들 입니다.
+<h1>Academic Projects:</h1>
 
-    Computer Graphics:
+    진행한 학교과제들 중 흥미로웠던 프로젝트들 입니다.
+Computer Graphics:
+
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/format.png" >
 </div>
@@ -78,12 +68,12 @@ Academic Projects:
     <img class="portfolioImg" src="assets/img/portfolio/format.png" >
 </div>
 
-UI Project:
+<h2>UI Project:</h2>
 
 <div class="portfolioImgBox">
 <img class="portfolioImg" src="assets/img/portfolio/format.png" >
 </div>
-Computer Arcitecture:
+<h2>Computer Arcitecture:</h2>
 
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/format.png" >
@@ -94,18 +84,7 @@ Computer Arcitecture:
 </div>
 
 
-
-
-
-
-
-Academic Projects:
-
-<br>
-<br>
-
-
-<p>Education:</p>
+<h1>Education:<h1>
     
     University of Maryland, Baltimore County 에서 학사 졸업.
     Computer Sciecne를 전공했고, Game Development Track 커리큘럼을 수강했습니다.
