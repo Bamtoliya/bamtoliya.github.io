@@ -359,7 +359,8 @@ td {
         margin: auto;
     }
         .portfolioImg {
-            object-fit: scale-down;
+            width: 100%;
+            height: auto;
         }
 
 .about-me {

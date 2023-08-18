@@ -19,7 +19,7 @@ layout: default
 <p class="skills">Skills:</p>
 
 <p class=>Main:</p>
-    <p>주로 사용하는 언어로는<p>
+    <p>주로 사용하는 언어로는</p>
     <p>C, C++, C#</p>
 
     Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, ReactJS, Node.JS, ExpressJS, 
@@ -33,7 +33,7 @@ Personal Projects:
 BamOwl.com
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
-    <a href="">detail</a>
+    <p style="float:right" href="">detail</p>
 </div>
 
 <div class="portfolioImgBox">
