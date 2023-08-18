@@ -350,7 +350,7 @@ td {
 
 }
 
-    .portfolio-container .portfolioImg {
+    .portfolio-container .portfolioImgBox {
         width: 49%;
         height: auto;
         min-height: 300px;
@@ -358,13 +358,17 @@ td {
         background-color: rgb(83, 97, 90);
         margin: auto;
     }
-        .portfolioImg > img {
+        .portfolioImgBox > .portfolioImg {
             object-fit: scale-down;
         }
 
 .about-me {
     text-align: left;
 }
+
+    .about-me > p {
+        margin-left: 40px;
+    }
 
 .skills{
     text-align: left;
