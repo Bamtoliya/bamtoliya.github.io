@@ -361,3 +361,11 @@ td {
         .portfolioImg > img {
             object-fit: scale-down;
         }
+
+.about-me {
+    text-align: left;
+}
+
+.skills{
+    text-align: left;
+}

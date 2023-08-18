@@ -8,18 +8,28 @@ layout: default
 
 <!--Need magnifyig on hover the image to maximize the image size regarless the other content and showed the abstract under the image.-->
 
-About Me:
-안녕하세요!
 
-Skills:
+<p class="about-me">
+About Me:
+<br>
+    <span>안녕하세요!</span>
+</p>
+
+<p class="skills">
+    Skills:
+<br>
 
 Main: C, C++, C#
 
 Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, ReactJS, Node.JS, ExpressJS, 
 
-Personal Projects:
+</p>
 
+<p>
+Personal Projects:
+<br>
 개인적으로 진행한 프로젝트들 입니다.
+</p>
 
 BamOwl.com
 <div class="portfolioImg">
@@ -89,6 +99,9 @@ Computer Arcitecture:
 
 
 Academic Projects:
+
+<br>
+<br>
 
 
 Education:
