@@ -350,18 +350,20 @@ td {
 
 }
 
-    .portfolio-container .portfolioImgBox {
-        width: 49%;
-        height: auto;
-        min-height: 300px;
-        max-height: 400px;
-        background-color: rgb(83, 97, 90);
-        margin: auto;
-    }
-        .portfolioImg {
-            width: 100%;
-            height: auto;
-        }
+.portfolioImgFrame {
+    width: 300px;
+    height: auto;
+    min-height: 300px;
+    max-height: 400px;
+    background-color: rgb(83, 97, 90);
+    margin: auto;
+    display: inline-flex;
+}
+
+.portfolioImg {
+    width: 100%;
+    height: auto;
+}
 
 .about-me {
     text-align: left;
