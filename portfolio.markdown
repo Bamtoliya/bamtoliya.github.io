@@ -56,7 +56,7 @@ Computer Graphics:
 <div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/format.png" >
 </div>
-<div class="portfolioImg">
+<div class="portfolioImgBox">
     <img class="portfolioImg" src="assets/img/portfolio/format.png" >
 </div>
 
@@ -82,6 +82,12 @@ Computer Graphics:
     <a href=""><img class="portfolioImg" src="assets/img/portfolio/format.png" ></a>
     
 </div>
+```cpp
+    int main(){
+        Check
+    }
+    
+```
 
 
 <h1>Education:<h1>
