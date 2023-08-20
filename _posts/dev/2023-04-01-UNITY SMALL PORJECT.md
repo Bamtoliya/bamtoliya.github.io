@@ -9,6 +9,14 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 학교에서 진행한 Capstone Project #1
 
+Language: C#
+
+Tools: Unity Engine
+
+구현한 기능:
+
+내가 맡은 역할:
+
 Capstone에서 두번의 프로젝트를 진행하는데
 첫번째로는 작은팀으로 총 3명으로 이루어졌는데
 프로그래머 1 명과 그래픽 디자이너 2명이 한팀으로

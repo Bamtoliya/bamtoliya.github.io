@@ -18,17 +18,22 @@ layout: default
 <span><p>Language: C, C++, C#</p></span>
 <span><p>Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, ReactJS, Node.JS, ExpressJS</p></span>
     
-# Personal Projects:
+
+<h1>Personal Projects:</h1>
 
 
-<div class="portfolioImgFrame">
-    <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
-    <span><a style="float:right" href="">detail</a></span>
-</div>
+<a href="">
+    <div class="portfolioImgFrame">
+        <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
+    </div>
+</a>
 
-<div class="portfolioImgFrame">
-    <img  class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
-</div>
+<a href="">
+    <div class="portfolioImgFrame">
+        <img  class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
+    </div>
+</a>
+
 
 
 <!--# Team Projects:
@@ -70,10 +75,9 @@ layout: default
 
 
 
-### Education:
+<h1>Education:</h1>
     
-    University of Maryland, Baltimore County 에서 학사 졸업.
-    Computer Sciecne를 전공했고, Game Development Track 커리큘럼을 수강했습니다.
+    University of Maryland, Baltimore County 에서 Computer Sciecne로 학사 졸업했고, Game Development Track 커리큘럼을 수강했습니다.
 
     자세한 수강목록은 List로 정리해두었습니다.
 

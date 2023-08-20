@@ -8,3 +8,11 @@ tag: portfolio, 포트폴리오, Academy, 학교, 수업
 
 
 학교에서 진행한 Capstone Project #2
+
+
+Language: C#
+Stacks:
+Tools: Unity Engine
+
+
+
