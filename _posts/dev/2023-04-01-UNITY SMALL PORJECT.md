@@ -9,7 +9,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 학교에서 진행한 Capstone Project #1
 
-<p><div><img src = "\assets\img\dev\WallJumpThumbnail.png" class="img"></div></p>
+<p><div><img src = "../../assets/img/dev/WallJumpThumbnail.png" class="img"></div></p>
 
 Language: C#
 

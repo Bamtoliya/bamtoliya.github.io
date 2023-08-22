@@ -16,7 +16,8 @@ gem "minima", "~> 2.5"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-paginate", "~> 1.1.0"  # Ãß°¡
+  gem "jekyll-paginate", "~> 1.1.0"  # ï¿½ß°ï¿½
+  gem 'jekyll-spaceship'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
