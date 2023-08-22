@@ -10,9 +10,9 @@ tag: portfolio, 포트폴리오, Academy, 학교, 수업
 
 ---
 
-<img src ="" alt="">
+<img class="img" src ="../../assets/img/dev/UIProjectThumbnail.png">
 
-<iframe class="video"></iframe>
+<iframe class="video" width="640" height="360" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="2" allowfullscreen></iframe>
 
 ---
 

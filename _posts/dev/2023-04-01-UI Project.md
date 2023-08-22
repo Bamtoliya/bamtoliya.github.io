@@ -6,14 +6,14 @@ category: dev
 tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 ---
 
+<img class="img" src ="../../assets/img/dev/UIProjectThumbnail.png">
 
-
+---
 
 Language: C#
-
-Stacks: 
-
 Tools: Unity Engine
+
+---
 
 <br>
 
