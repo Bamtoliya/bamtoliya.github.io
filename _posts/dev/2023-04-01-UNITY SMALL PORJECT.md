@@ -50,16 +50,12 @@ Capstone에서 두번의 프로젝트를 진행하는데
 
 # Test
 
-<div >
-
 ```cs
 if (isWall)
 {				
     rb2d.velocity = new Vector2(0, -wallSlidingSpeed);
 }
 ```
-
-</div>
 
 첫 플레이 테스트중 차징점프를 취소했음에도 불구하고 벽에서 속도가 엄청나게 붙는것을 발견,
 모든 테스터들이 스페이스바를 단발성으로 누르지않고 길게 누르는것을 알아냈다.
