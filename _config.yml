@@ -56,17 +56,11 @@ plugins:
 #   - vendor/ruby/
 
 
+
+
 # Conversion
-markdown:    kramdown
+markdown: kramdown
 highlighter: rouge
-
-# Markdown Processors
-kramdown:
-  input: GFM
-  auto_ids: true
-  syntax_highlighter: rouge
-
-
 
 permalink: /:categories/:title
 

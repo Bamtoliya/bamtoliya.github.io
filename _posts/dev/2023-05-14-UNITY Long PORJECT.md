@@ -6,13 +6,27 @@ category: dev
 tag: portfolio, 포트폴리오, Academy, 학교, 수업
 ---
 
-학교에서 진행한 Capstone Project #2
+# 학교에서 진행한 Capstone Project #2
+
+---
 
 <img src ="" alt="">
+
+<iframe class="video"></iframe>
+
+---
 
 Language: C#
 Stacks: 
 Tools: Unity Engine
+
+---
+
+
+
+내가 맡은일:
+
+---
 
 앞선 유니티 프로젝트보다 상대적으로 긴 기간이 주어진 프로젝트다.
 기간은 정확하겐 기억이 나진않지만 8주에서 10주 였던것 같다.

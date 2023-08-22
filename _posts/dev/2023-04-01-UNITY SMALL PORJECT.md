@@ -7,23 +7,39 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 ---
 
 
-학교에서 진행한 Capstone Project #1
+# 학교에서 진행한 Capstone Project #1
 
-<p><div><img src = "../../assets/img/dev/WallJumpThumbnail.png" class="img"></div></p>
+---
 
-Language: C#
+<img src = "../../assets/img/dev/WallJumpThumbnail.png" class="img">
 
-Tools: Unity Engine
+---
 
+<iframe class="video" width="640" height="360" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="2" allowfullscreen></iframe>
 
-구현한 기능:
+---
 
-내가 맡은 역할:
+- Language: C#
+
+- Tools: Unity Engine
+
+---
+
+- 내가 맡은 역할:
+
+- 구현한 기능:
+
+---
 
 Capstone에서 두번의 프로젝트를 진행하는데
+
 첫번째로는 작은팀으로 총 3명으로 이루어졌는데
+
 프로그래머 1 명과 그래픽 디자이너 2명이 한팀으로
+
 약 3주의 시간내에 한 주어진 주제를 녹여내고 한스테이지를 만드는것이 과제로 주어졌다.
+
+<br>
 
 나는 프로그래머로서 참여를 하게됐다.
 
@@ -33,6 +49,8 @@ Capstone에서 두번의 프로젝트를 진행하는데
 
 사용한 엔진은 UNITY 엔진
 언제나 그렇지만 소규모 프로젝트에서 유니티의 생산성은 엄청나다.
+
+<br>
 
 기본적인 그래픽 기법은 픽셀아트로
 배경, 지형, 캐릭터, 이펙트 정도로 나뉘었다.
@@ -45,10 +63,10 @@ Capstone에서 두번의 프로젝트를 진행하는데
 벽에서 속도가 무한정으로 붙어 하늘로 치솟는 경우가 발생했다.
 
 따라서 차징점프는 취소하고 단순한 벽점프를 구현했다.
+
+box colider와 닿아있는 오브젝트의 Tag를 확인하고 만약 Tag가 바닥이나 벽이라면 점프가 가능하게 한다.
+
 벽에 붙어있을 경우 천천히 땅으로 떨어지게 중력을 추가했다.
-
-
-# Test
 
 ```cs
 if (isWall)
@@ -56,6 +74,7 @@ if (isWall)
     rb2d.velocity = new Vector2(0, -wallSlidingSpeed);
 }
 ```
+
 
 첫 플레이 테스트중 차징점프를 취소했음에도 불구하고 벽에서 속도가 엄청나게 붙는것을 발견,
 모든 테스터들이 스페이스바를 단발성으로 누르지않고 길게 누르는것을 알아냈다.
@@ -95,8 +114,6 @@ private IEnumerator Dash()
 받은 키 입력대로 애니메이션이 바뀌게, 컨트롤러 스크립트에 변수들을 추가선언한다.
 
 
-
-Youtube Video:
 
 배운점:
     유니티 애니메이터 사용법,

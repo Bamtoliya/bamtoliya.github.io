@@ -7,15 +7,16 @@ tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
 ---
 
 
-<h1>Fectch</h1>
-학교 구성원들만 사용할 수 있는 익명 커뮤니티 
+# Fectch
+## 학교 구성원들만 사용할 수 있는 익명 커뮤니티 
 
-
-
+---
 
 Language: Javascript
 Stacks: ExpressJS, NodeJS, MongoDB, ReactJS
 Tools: Figma, Git
+
+---
 
 내가 맡은 역할: 구조설계, 프론트엔드와 백엔드 연결
 
@@ -35,12 +36,12 @@ Sofware Engineering의 수업으로
 사용할 프레임워크를 정하고
 
 UML 다이어그램을 통해 필요한 클래스와 함수 등을 미리 정의했다.
-<img src = "\assets\img\portfolio\CMSC447 Class diagram.drawio.png" alt = "">
+<img class ="img" src = "../../assets/img/portfolio/CMSC447 Class diagram.drawio.png">
 그외에 이해에 필요한 프론트엔드 페이지와 백엔드의 기능을 그래픽으로 나타냈다.
-<img src = "\assets\img\portfolio\WebSerivce.jpg" alt = "">
+<img class ="img" src = "../../assets/img/portfolio/WebSerivce.jpg">
 
 로직 구조표를 작성했다.
-<img src= "\assets\img\portfolio\Logic.drawio.png" alt = "">
+<img class ="img" src="../../assets/img/portfolio/Pages.drawio.png">
 
 
 

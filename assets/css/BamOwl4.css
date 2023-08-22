@@ -1,3 +1,5 @@
+@import "../css/gsyntax.css";
+
 @font-face {
     font-family: 'Recipekorea';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
@@ -384,4 +386,9 @@ td {
 .divide-bar{
     width: 100%;
     
+}
+
+.video{
+    margin: 0 auto;
+    display: block;
 }

@@ -24,17 +24,15 @@ layout: default
 
 <a href="">
     <div class="portfolioImgFrame">
-        <img class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
+        <img class="portfolioImg" src="/assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
     </div>
 </a>
 
 <a href="">
     <div class="portfolioImgFrame">
-        <img  class="portfolioImg" src="assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
+        <img  class="portfolioImg" src="/assets/img/portfolio/img1.jpg"  alt = "assets/img/portfolio/format.png">
     </div>
 </a>
-
-
 
 <!--# Team Projects:
 <div class="portfolioImgBox">
