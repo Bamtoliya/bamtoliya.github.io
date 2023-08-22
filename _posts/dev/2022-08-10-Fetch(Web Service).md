@@ -12,6 +12,7 @@ tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 
 
+
 Language: Javascript
 Stacks: ExpressJS, NodeJS, MongoDB, ReactJS
 Tools: Figma, Git
@@ -38,7 +39,7 @@ UML 다이어그램을 통해 필요한 클래스와 함수 등을 미리 정의
 그외에 이해에 필요한 프론트엔드 페이지와 백엔드의 기능을 그래픽으로 나타냈다.
 <img src = "\assets\img\portfolio\WebSerivce.jpg" alt = "">
 
-로직에 대한 표:
+로직 구조표를 작성했다.
 <img src= "\assets\img\portfolio\Logic.drawio.png" alt = "">
 
 
