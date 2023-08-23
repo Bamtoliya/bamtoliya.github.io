@@ -15,25 +15,27 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 ---
 
-<iframe classs="video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/iUFhRsUxtIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
 - Language: C#
 
-- Tools: Unity Engine
+- Tool: Unity Engine
 
 ---
 
-- 내가 맡은 역할:
+- 목적: 학교에서 진행한 Capstone Project #1
 
-- 구현한 기능:
+- 내가 맡은 역할: 프로그래머, 레벨디자인, 애니메이션 스크립트
+
+- 구현한 기능: 캐릭터 이동, 벽점프, 대쉬기능
 
 ---
 
 Capstone에서 두번의 프로젝트를 진행하는데
 
-첫번째로는 작은팀으로 총 3명으로 이루어졌는데
+첫번째로는 작은팀으로 총 3명으로 이루어졌다.
 
 프로그래머 1 명과 그래픽 디자이너 2명이 한팀으로
 
@@ -57,8 +59,53 @@ Capstone에서 두번의 프로젝트를 진행하는데
 
 프로그래머로서 해야할것은 플랫포머에서 기본적인 이동과 점프 그리고 원하는 기능을 구현해야했다.
 
+<br>
+
+일단은 단순한 좌우 움직임과 점프부터, 프레임마다 입력을 체크해서 입력이 들어오면 조건을 확인하고 캐릭터의 방향을 바꾼다
+스페이스바 입력이 확인되면 캐릭터의 위쪽으로 가해지는 힘을 더하여 수직으로 이동시킨다.
+
+```cs
+
+void Flip()
+{
+    //Reverse the X scale of player to make the face opposite direction.
+    facingRight = !facingRight;
+    Vector3 theScale = transform.localScale;
+    theScale.x *= -1;
+    transform.localScale = theScale;
+}
+
+if (Input.GetAxis("Horizontal") > 0 && !facingRight)
+{
+    Flip();
+}
+else if (Input.GetAxis("Horizontal") < 0 && facingRight)
+{
+    Flip();
+}
+
+if (Input.GetButton("Jump") && (grounded || isWall))
+{
+    Debug.Log("Jump");
+    jump = true;
+    animator.SetBool("jump", jump);
+    //jumpTime = 0;
+}
+
+if (jump)
+{
+    rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    jump = false;
+}
+
+```
+
+<br>
+
 처음에는 단순한 점프가 아니라 차징점프가 된다면 더욱 재밌을꺼 라고 생각해서
 차징점프를 구현해서 도입했다.
+
+<br>
 하지만 차징에 이어 벽 점프를 구현하다가 차징과 벽점프가 충돌해서
 벽에서 속도가 무한정으로 붙어 하늘로 치솟는 경우가 발생했다.
 
@@ -77,10 +124,17 @@ if (isWall)
 
 
 첫 플레이 테스트중 차징점프를 취소했음에도 불구하고 벽에서 속도가 엄청나게 붙는것을 발견,
+
 모든 테스터들이 스페이스바를 단발성으로 누르지않고 길게 누르는것을 알아냈다.
 
+<br>
+
 더 자세히 코드를 살펴보니, 벽에 붙어있을때 Boolean이 제대로 적용되지않는것을 확인했다.
+
 Box Colider의 사이즈를 조정하니 해결할 수 있었다.
+
+
+<br>
 
 차징점프를 위해 디자이너가 만들어둔 이펙트가 아까워서
 
@@ -108,17 +162,23 @@ private IEnumerator Dash()
 
 만들어둔 이펙트의 방향과 커맨드를 바꾸었다.
 
-<img src = " ">
-
 아티스트들에게서 Sprite를 받아 애니메이션을 만들고,
 받은 키 입력대로 애니메이션이 바뀌게, 컨트롤러 스크립트에 변수들을 추가선언한다.
 
 
+<br>
+<br>
 
-배운점:
-    유니티 애니메이터 사용법,
-    작은 규모의 팀에서의 프로그래머가 하는일,
-    기본적인 게임개발의 협업 사이클,
+---
 
-고칠점:
-    단순히 기능 구현이라고만 생각했지 게임이라고는 생각을 못해서 게임시작과 끝이 따로 정해져있지않다.
+ - 배운점:
+    1. 유니티 애니메이터 사용법
+    2. 작은 규모의 팀에서의 프로그래머가 하는일
+    3. 기본적인 게임개발의 협업 사이클
+
+<br>
+
+ - 고칠점: 
+    1. 단순히 기능 구현이라고만 생각했지 게임이라고는 생각을 못해서 게임시작과 끝이 따로 정해져있지않다.
+
+---

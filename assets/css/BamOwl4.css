@@ -369,10 +369,12 @@ td {
 .portfolioImg {
     width: 100%;
     height: auto;
+    max-width: 480px;
 }
 
 .about-me {
     text-align: left;
+    font-weight: bold;
 }
 
     .about-me > p {
