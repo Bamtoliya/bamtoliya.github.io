@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  UI Project
-date:   2023-04-01
+date:   2022-11-28
 category: dev
 tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 ---
@@ -11,7 +11,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 ---
 
-목적: UI 수업에서 주어진 자유과제로, RPG 게임의 UI를 흉내냈다.
+- 목적: UI 수업에서 주어진 자유과제로, RPG 게임의 UI를 흉내냈다.
 
 ---
 
@@ -49,6 +49,10 @@ Hidden: 아이템, 스킬, 캐릭터정보창, 감정표현창, ESC Menu
 
 <br>
 
+--- 
+ - 프로젝트를 진행하면서 어려웠던점:
+    1. 
+
 ---
 
 - 배운점:
@@ -60,4 +64,4 @@ Hidden: 아이템, 스킬, 캐릭터정보창, 감정표현창, ESC Menu
 ---
 
 
-[Github](https://github.com/UMBC-CMSC437-FA2022/project-mmodemo)
+~~[Github](https://github.com/UMBC-CMSC437-FA2022/project-mmodemo)~~

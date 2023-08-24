@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Fetch (Web Service)
-date:   2023-04-01
+date:   2022-12-15
 category: dev
 tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
 ---
@@ -22,7 +22,11 @@ tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 ---
 
-내가 맡은 역할: 구조설계, 프론트엔드와 백엔드 연결
+- 인원: 5 (프론트엔드 3, 백엔드 2)
+- 기간: 2022-10-05 ~ 2022-12-16 (9주)
+- 내가 맡은 역할: 구조설계, 프론트엔드와 백엔드 연결
+ 
+---
 
 학교 과제중 하나로 진행한 팀프로젝트다.
 Sofware Engineering의 수업으로
@@ -77,6 +81,11 @@ Category를 설정하여 글을 작성할수 있다.
 <img class = "img" src= "../../assets/img/dev/FetchComment.png">
 
 
+
+
+--- 
+ - 프로젝트를 진행하면서 어려웠던점:
+    1. 
 
 
 

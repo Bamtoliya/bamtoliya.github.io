@@ -52,7 +52,7 @@ Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, NodeJS Fram
 <h1 class = "about-me" > Academic Projects: </h1>
 
 | ----------- | ----------- |
-| <img class="portfolioImg" src="../assets/img/dev/UIProjectThumbnail.png"> | UI Project |
+| [<img class="portfolioImg" src="../assets/img/dev/UIProjectThumbnail.png">](https://bamowl.com/dev/UI-Project) | - UI Project <br> UI수업의 자유과제로 RPG의 UI를 구현해보기 <br> Drag&Drop, 몬스터 정보, 인벤토리, 캐릭터정보, 프리셋, 휠메뉴, 미니맵, 스킬창, 아이콘 메뉴, 마우스 활성화 |
 |  | - Computer Graphics for Game Projects <br> 언리얼엔진을 기반으로 엔진및 그래픽을 공부하는 프로젝트 <br> 플러그인 생성, 쉐이더 생성,  |
 |  | - Computer Graphics Projects <br> C++로 레이트레이싱, 래스터화, OpenGL 기반의 렌더링 테크닉을 공부하는 프로젝트 |
 |  | - Computer architeture Projects |
