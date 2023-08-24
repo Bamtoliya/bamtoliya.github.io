@@ -49,11 +49,15 @@ Hidden: 아이템, 스킬, 캐릭터정보창, 감정표현창, ESC Menu
 
 <br>
 
-배운점:
+---
 
+- 배운점:
+    1. 
 
-반성:
-    데이터를 저장할떄 다른 구조를 사용했으면,
+- 고칠점:
+    1. 
+
+---
 
 
 [Github](https://github.com/UMBC-CMSC437-FA2022/project-mmodemo)

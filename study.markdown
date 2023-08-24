@@ -3,7 +3,7 @@ title: Study
 layout: default
 ---
 
-<h1>Game: Latest Posts</h1>
+<h1>Study: Latest Posts</h1>
 
 <ul style="list-style:none;">
   {% for post in site.posts %}
@@ -14,8 +14,3 @@ layout: default
   {% endif %}
   {% endfor %}
 </ul>
-
-<section class="introduction">
-    <p>This website built for personal portfolio and blog.</p>
-    <p>이 웹사이트는 개인 블로그와 포트폴리오 용도로 만들어졌습니다.</p>
-</section>

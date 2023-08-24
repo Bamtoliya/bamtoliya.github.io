@@ -53,9 +53,10 @@ Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, NodeJS Fram
 
 | ----------- | ----------- |
 | <img class="portfolioImg" src="../assets/img/dev/UIProjectThumbnail.png"> | UI Project |
-| | Computer Graphics Projects |
-| | Computer architeture Projects |
-| | Computer Graphics for Game Projects |
+|  | - Computer Graphics for Game Projects <br> 언리얼엔진을 기반으로 엔진및 그래픽을 공부하는 프로젝트 <br> 플러그인 생성, 쉐이더 생성,  |
+|  | - Computer Graphics Projects <br> C++로 레이트레이싱, 래스터화, OpenGL 기반의 렌더링 테크닉을 공부하는 프로젝트 |
+|  | - Computer architeture Projects |
+
 
 --- 
 
@@ -63,16 +64,10 @@ Exprience: Python, Java, JavaScript, HTML, CSS, MongoDB, MYSQL, PHP, NodeJS Fram
 
 <div markdown="1" style="text-align: left">
 [University of Maryland, Baltimore County](https://umbc.edu/)에서 Computer Sciecne로 학사 졸업했고, [Game Development Track](https://www.csee.umbc.edu/undergraduate/cmsc-game-development-track/) 커리큘럼을 수강했습니다.
-자세한 수강목록은 [List]()로 정리해두었습니다.
+자세한 수강목록은 [List](https://bamowl.com/portfolio/list)로 정리해두었습니다.
 </div>
 
 
 
 
-</section>
-
-
-<section class="introduction">
-    <p>This website built for personal portfolio and blog.</p>
-    <p>이 웹사이트는 개인 블로그와 포트폴리오 용도로 만들어졌습니다.</p>
 </section>
