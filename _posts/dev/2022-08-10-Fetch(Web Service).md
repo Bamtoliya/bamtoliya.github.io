@@ -48,6 +48,33 @@ UML 다이어그램을 통해 필요한 클래스와 함수 등을 미리 정의
 <img class ="img" src="../../assets/img/portfolio/Pages.drawio.png">
 
 
+일단 기본적인 Login 페이지
+
+
+<img class = "img" src= "../../assets/img/dev/Login.png">
+
+SignUp을 누르고 들어가면 가지고있는 이메일을 검사한다.
+일단은 입력한 이메일이 학교이메일인지 확인한다.
+원래 계획대로라면 여기에 Google Authorize를 추가해서 메일인증을 진행하겠지만 시간이 부족해 진행하지 못했다.
+
+<img class = "img" src= "../../assets/img/dev/Verification.png">
+
+회원정보를 입력하는창, 통계를위해 수집하는것이며, 아이디와 비밀번호는 해쉬로 암호화하여 데이터베이스에 저장한다.
+
+<img class = "img" src= "../../assets/img/dev/Information.png">
+
+Category를 설정하여 글을 작성할수 있다.
+
+<img class = "img" src= "../../assets/img/dev/FetchCategory.png">
+
+
+카테고리를 누르면 필터링이되어 해당 주제만 볼수 있다.
+
+<img class = "img" src= "../../assets/img/dev/FetchSort.png">
+
+오른쪽 드랍다운 메뉴에 들어가 코멘트를 클릭하면 작성및 코멘트를 확인할 수 있다.
+
+<img class = "img" src= "../../assets/img/dev/FetchComment.png">
 
 
 
@@ -59,4 +86,7 @@ UML 다이어그램을 통해 필요한 클래스와 함수 등을 미리 정의
 
 
 
-https://github.com/ParagMayani/FetchCmsc447
+
+
+
+[Github](https://github.com/ParagMayani/FetchCmsc447)

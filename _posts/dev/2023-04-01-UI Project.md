@@ -45,21 +45,15 @@ Static: 체력, 마우스클릭으로 가능한 아이콘, 프리셋 창
 Hidden: 아이템, 스킬, 캐릭터정보창, 감정표현창, ESC Menu
 
 
-Youtube Video: 
-
-
-
-
-
 
 
 <br>
 
 배운점:
 
+
 반성:
     데이터를 저장할떄 다른 구조를 사용했으면,
 
 
-Github Link:
-    https://github.com/UMBC-CMSC437-FA2022/project-mmodemo
+[Github](https://github.com/UMBC-CMSC437-FA2022/project-mmodemo)
