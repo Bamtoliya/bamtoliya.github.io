@@ -141,6 +141,8 @@ Box Colider의 사이즈를 조정하니 해결할 수 있었다.
 
 차징점프 대신에 대쉬를 추가하였다.
 
+대쉬하는 시간과 쿨타임간의 yield 와 wait를 걸어 사용빈도와 조작감을 조정한다.
+
 ```cs
 
 private IEnumerator Dash()
