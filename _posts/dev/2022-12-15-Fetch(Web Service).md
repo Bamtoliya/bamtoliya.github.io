@@ -18,7 +18,7 @@ tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 - Language: Javascript
 - Stacks: ExpressJS, NodeJS, MongoDB, ReactJS
-- Tools: Figma, Git
+- Tools: Figma, Git, Draw.io
 
 ---
 
