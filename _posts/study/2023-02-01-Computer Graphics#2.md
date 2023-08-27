@@ -29,7 +29,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 C++ 에선 semaphhore 와 thread 를 사용할 수 있다.
 
-
+앞선 레이트레이싱 과정에서 
 
 
 
