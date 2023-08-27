@@ -15,6 +15,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 ---
 - Language: C++
+- Tool Visual Studio
 ---
 
 기본적으로는 [.ray](https://paulbourke.net/dataformats/rayshade/) 파일을 읽고
