@@ -10,15 +10,18 @@ tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
 ![Alt text](../../assets/img/study/MaterialGraph.jpg)
 
 ---
+
 언어: GLSL, C++
+
 툴: Unreal Engine, Visual Studio
+
 ---
 
 게임에서 사용되는 컴퓨터 그래픽에대한 수업이였다.
 
 구름을 재현하는 쉐이더를 만드는 프로젝트였다.
 
-마테리얼 그래프에 쓰이는 함수 쉐이더 모둘을 제작하는 과제였다.
+언리얼 엔진을 마테리얼 그래프에 쓰이는 함수 쉐이더 모둘을 제작하는 과제였다.
 
 ```cpp
 void FGameModuleImpl::StartupModule()
@@ -75,7 +78,8 @@ float4 Cloud(FMaterialPixelParameters Parameters, int MaxSteps, float3 Albedo, f
 
 ---
 
-- 프로젝트를 통해 배운것: 
- 1. 언리얼 엔진에서 C++ 코드로 어떻게 모듈을 만드는지, 쉐이더의 기본적인 구조
+- 프로젝트를 통해 배운것:
+
+ 1. 언리얼 엔진에서 C++ 코드로 어떻게 모듈을 만드는지
 
 ---

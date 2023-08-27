@@ -11,11 +11,11 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 # Computer Grpahics
 
-들었던 학교 수업중에 가장 흥미로웠던 수업중 하나.
-
 ---
+
 - Language: C++
-- Tool Visual Studio
+- Tool: Visual Studio
+
 ---
 
 기본적으로는 [.ray](https://paulbourke.net/dataformats/rayshade/) 파일을 읽고
@@ -27,7 +27,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 멀티 쓰레딩을 통해 처리속도를 높일수 있다.
 
-C++ 에선 <semaphhore> 와 <thread>를 사용한다.
+C++ 에선 semaphhore 와 thread 를 사용할 수 있다.
 
 
 
