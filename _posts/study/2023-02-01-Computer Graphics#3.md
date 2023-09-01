@@ -15,10 +15,12 @@ Shader Design Pattern
 
 ---
 
-- Language: C++
+- Language: C++, OpenGL
 - Tool: Visual Studio
 
 ---
+
+Recursive Subdivision으로 오브젝트를 부드럽게 만들기.
 
 
 ---

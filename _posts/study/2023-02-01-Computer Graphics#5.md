@@ -20,6 +20,8 @@ Shader Design Pattern
 
 ---
 
+타일링 패턴을 모사하는 과제
+
 
 
 ---

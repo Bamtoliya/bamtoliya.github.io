@@ -24,6 +24,14 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 > Rasterization
 
 
+렌더링 파이프라인:
+    1. 
+    2. 
+    3.
+    4. 
+    5.  
+    6. 
+
 
 
 ---

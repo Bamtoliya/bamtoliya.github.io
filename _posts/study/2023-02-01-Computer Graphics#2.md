@@ -31,7 +31,9 @@ C++ 에선 semaphhore 와 thread 를 사용할 수 있다.
 
 앞선 레이트레이싱 과정에서 
 
+반사와 그림자 그리고 광선의 충돌횟수를 증가시켜, 음영을 추가한다.
 
+Bhlin Phong Shading 기법과
 
 
 
