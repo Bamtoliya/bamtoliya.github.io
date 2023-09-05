@@ -27,7 +27,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 ray 파일에는 환경과, 오브젝트의 위치와 색의 정보가 쓰여져있으며,
 그것을 읽고, 레이트레이싱 기법으로 픽셀에 반영될 색정보를 저장해
-렌더링하고 PPM 포맷의 파일로 저장한다.
+렌더링하고 [PPM](https://paulbourke.net/dataformats/ppm/#:~:text=A%20PPM%20file%20consists%20of,including%20the%20double%20quotes!)포맷의 파일로 저장한다.
 
 빛줄기를 따라가서 물체에 맞았다면, 물체의 색깔을 저장하고 아니라면 배경색을 저장한다.
 
@@ -43,7 +43,7 @@ ray 파일에는 환경과, 오브젝트의 위치와 색의 정보가 쓰여져
 파일안에 있는 오브젝트의 갯수를 N
 
 이 경우 예상 시간은 O(X*Y*N)이 된다.
-시간을 줄이기위해선 재귀구조로 변경하거나 멀티쓰레드 방법을 사용할 수 있다.
+시간을 줄이기위해선 자료구조의 변경과 함수를 재귀구조로 바꾸거나 멀티쓰레드 방법을 사용할 수 있다.
 
 충돌을 확인하는 방법은
 구체일떄와, 삼각형, 그리고 다각형일때가 다른데
@@ -51,9 +51,35 @@ ray 파일에는 환경과, 오브젝트의 위치와 색의 정보가 쓰여져
 이번 과제에서는 구체의 경우만 처리한다.
 
 구체와 빛의 충돌을 확인하기위해서 빛의 방향과 구체의 영역이 겹친다면 구체의색을 리턴한다.
+그중 가장 가까운 거리에있는 물체만을 반사하기위해서 물체와 광선이 겹친 점을 계산하여 저장한다.
+같은 광선에 다른 물체와 겹쳤다면 저장한 값과 비교하여 가까운 거리에 있는 색만 저장한다.
 
+구체의 경우, 
 
+~~~cpp
+float Sphere::intersection(Ray r) {
 
+    //
+    Vector3D distance = r.e - center;
+
+    float a = dot(r.d, r.d);
+    float b = 2.0 * dot(distance, r.d);
+    float c = dot(distance, distance) - radius * radius;
+
+    float discriminant = b * b - 4 * a * c;
+
+    float root1 = -b + sqrt(discriminant) / (2 * a);
+    float root2 = -b - sqrt(discriminant) / (2 * a);
+
+    float t = root1;
+
+    if (root1 < 0 || (root2 > 0 && root2 < root1)) {
+        t = root2;
+    }
+
+    return t;
+}
+~~~
 
 <img class="img" src="../../assets/img/dev/trace1.png">
 

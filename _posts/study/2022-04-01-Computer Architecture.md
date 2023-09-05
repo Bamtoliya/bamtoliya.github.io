@@ -15,6 +15,5 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 간단화 시킨 MIPS 유닛이다.
 
-
 간단화 시킨 모델을 C++로 재현한다.
 
