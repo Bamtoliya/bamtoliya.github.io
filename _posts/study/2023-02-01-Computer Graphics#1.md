@@ -15,6 +15,7 @@ tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
 
 - Language: C++
 - Tool: Visual Studio
+- 핵심 개념: Ray Tracing
 
 ---
 

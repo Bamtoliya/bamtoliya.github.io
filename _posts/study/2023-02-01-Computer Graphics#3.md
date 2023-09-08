@@ -20,6 +20,12 @@ Shader Design Pattern
 
 ---
 
+## 핵심개념: UV Coordinate, Seamless Techique
+
+---
+
+Start From the Octahedron, make a humble rock
+
 Recursive Subdivision으로 오브젝트를 부드럽게 만들기.
 
 
