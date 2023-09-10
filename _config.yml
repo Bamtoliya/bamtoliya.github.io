@@ -63,6 +63,7 @@ markdown: kramdown
 highlighter: rouge
 
 permalink: /:categories/:title
+permalin: /:categories/:tags
 
 tipue_search:
    include:

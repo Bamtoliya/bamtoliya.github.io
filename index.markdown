@@ -23,14 +23,16 @@ layout: default
 
 
 
-<section>
+<section><!--Post Section-->
 Lastest Posts
 
 <ul style="list-style:none;">
 {% for post in site.posts limit: 10 %}
 {% if post.category != empty %}
     <li>
-        <h3>{{post.category}} <a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}</span></h3>      
+        <h3>
+        <a style="text-decoration:none; color: black;" href="{{post.category}}">{{post.category}} ▶</a> 
+        <a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}</span></h3>      
     </li>
 {% endif %}
 {% endfor %}
