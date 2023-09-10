@@ -62,7 +62,7 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
-permalink: /:categories/:tags/:title
+permalink: /:categories/:title
 
 tipue_search:
    include:
