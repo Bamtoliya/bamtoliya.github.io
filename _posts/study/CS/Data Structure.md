@@ -1,6 +1,19 @@
 # Data Structure
 
 
+Average Time & Space Complexity
+| Data Structure | Access | Search | Insertion | Deletion | Space Complexity(Worst) |
+| -------------- | ------ | ------ | --------- | -------- |O(n) |
+| Array          | O(1)     | O(n)     | O(n)      | O(n)     | O(n) | 
+| Stack          | O(n)     | O(n)     | O(1)      | O(1)     | O(n) | 
+| Queue          | O(n)     | O(n)     | O(1)      | O(1)     | O(n) | 
+| Linked List    |          |          |           |          | O(n) |
+| Tree           | O(log n) | O(log n) | O(log n)  | O(log n) | O(n) | 
+| Heap           |          |          |           |          | O(n) | 
+| Graph          |          |          |           |          | O(n) | 
+| Hash Table     |          | O(1)     | O(1)      | O(1)     | O(n) |
+
+
 ## Heap
 
 ## Stack
@@ -19,3 +32,4 @@
 
 ## N-Tree
 
+Draw by Draw.io
