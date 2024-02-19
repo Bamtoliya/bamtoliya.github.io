@@ -13,6 +13,9 @@ layout: default
                 </tr>
             </tbody>
         </table>
+        {% for tag in page.tags %}
+            {{ tag }}
+        {% endfor %}
         <br />
         <br />
         {{content}}
