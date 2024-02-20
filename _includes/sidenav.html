@@ -1,0 +1,22 @@
+<!--SideNavgation-->
+
+<section>
+    <div id="mySidenav">
+        <div href="javascript:void(0)" class="hidden">
+            <div class="sideNavIcon">
+                <div class="closebtn">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+        <div id="mySideList" class="hidden">
+            {% for item in site.data.navigation %}
+                <a class="boardlink" href="{{item.link}}" {% if page.url == item.link %} style="color: cadetblue;" {% endif %}>
+                    {{item.name}}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section><!--SideNavgation-->

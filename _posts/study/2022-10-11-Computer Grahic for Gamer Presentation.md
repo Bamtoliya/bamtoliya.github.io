@@ -3,8 +3,7 @@ layout: post
 title:  Computer Graphics for Game Presentation
 date:   2022-09-01
 category: study
-tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
-last_modified_at: 
+tags: dev portfolio 포트폴리오 Academy 학교 수업
 ---
 
 # Computer Graphics for Game Presentation

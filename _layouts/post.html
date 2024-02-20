@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <link rel="stylesheet" href="/assets/css/post.css">
 
     <div class="article_box">
@@ -8,10 +9,8 @@ layout: default
         <div id="title">{{ page.title }}</div>
         <div id="date">Date: {{ page.date | date_to_string }}</div>
         
-
-        {% for tag in page.tags %}
-            <a href="/search/?q={{tag}}"><button class="tag-button" role="button">#{{ tag }}</button></a>
-        {% endfor %}
+        {% include post_tags.html %}
+        
         <br />
         <br />
         {{content}}
@@ -19,20 +18,4 @@ layout: default
         <br />
     </div>
 
-    <section class="button-box">
-        <div class="PageNavigation">
-            {% if page.previous.url %}
-            {{page.previous.title}}</a>
-            <a href="{{page.previous.url}}">
-                <button class="previous">Previous</button>
-            </a>
-            {% endif %}
-            {% if page.next.url %}
-            <a href="{{page.next.url}}">
-                <button class="previous">Next</button>
-            </a>
-            {{page.next.title}}
-            {% endif %}
-        </div>
-
-    </section>
+    {% include pagenav.html %}

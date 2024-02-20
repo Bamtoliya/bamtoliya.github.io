@@ -1,0 +1,3 @@
+{% for tag in page.tags %}
+    <a href="/search/?q={{tag}}"><button class="tag-button" role="button">#{{ tag }}</button></a>
+{% endfor %}

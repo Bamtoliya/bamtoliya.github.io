@@ -1,0 +1,22 @@
+<section class="button-box">
+    <div class="PageNavigation">
+        {% if page.previous.url %}
+        <div class="left-page">
+        <a href="{{page.previous.url}}">
+            {{page.previous.title}}
+            <button class="page-button left-button">Prev</button>
+            
+        </a>
+        </div>
+        {% endif %}
+        {% if page.next.url %}
+        <div class="right-page">
+        <a href="{{page.next.url}}">
+            <button class="page-button right-button">Next</button>
+            {{page.next.title}}
+        </a>
+        </div>
+        {% endif %}
+    </div>
+
+</section>

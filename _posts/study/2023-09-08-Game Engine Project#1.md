@@ -3,7 +3,7 @@ layout: post
 title:  Game Engine Project#1
 date:   2023-09-08
 category: study
-tag: game, dev, portfolio, 포트폴리오
+tags: game dev portfolio 포트폴리오
 ---
 
 

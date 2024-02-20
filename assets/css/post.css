@@ -1,5 +1,8 @@
 /* CSS for post styling */
 
+a:hover{
+  text-decoration: none;
+}
 
 /* Title */
 
@@ -55,6 +58,7 @@
   .tag-button:hover {
     background: #F6F9FE;
     color: #174ea6;
+    text-decoration: none;
   }
   
   .tag-button:active {
@@ -65,3 +69,93 @@
     outline: none;
     border: 2px solid #4285f4;
   }
+
+
+  .article_box{
+    min-height: 600px;
+  }
+
+
+
+  /* page button */
+.page-button {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-style: none;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.left-page{
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+
+.right-page{
+  width: 50%;
+  float: right;
+  text-align: left;
+}
+
+.left-button{
+  border-radius: 24px 0px 0px 24px;
+}
+
+.right-button{
+  border-radius: 0px 24px 24px 0px;
+}
+
+.page-button:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.page-button:active {
+  outline: none;
+}
+
+.page-button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-box{
+  width: 1080px;
+  margin: auto;
+  text-align: center;
+}
+
+.PageNavigation {
+  font-size: 12px;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a:hover{
+  color: black;
+}

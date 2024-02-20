@@ -89,79 +89,7 @@ p {
     z-index: 1;
 }
 
-/*SideNav Material*/
-.sideNavIcon {
-    width: 50px;
-    height: 50px;
-    margin-left: 6px;
-    margin-top: 4px;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
 
-.bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 5px;
-    background-color: darkslategray;
-    margin: 8px;
-    margin-left: 10px;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    transform: rotate(45deg) translate(-10px, -8px);
-}
-
-.sideNavIcon:hover{
-    background-color: snow;
-
-}
-
-.hidden{
-    display: none;
-}
-
-.sidenav {
-    position: fixed;
-    height: 100%;
-    width: 230px;
-    z-index: 1;
-    top: 65px;
-    left: 0;
-    background-color: Darkgrey;
-    overflow-x: hidden;
-    font: 'Recipekorea', arial, sans-serif;
-}
-
-    .sidenav a {
-        display: inline-block;
-        padding: 8px 8px 8px 8px;
-        margin-top: 5px;
-        color: Dimgray;
-        box-shadow: 2px 3px #888888;
-    }
-
-    .sidenav a:hover {
-        color: lightslategray;
-    }
-
-    .sidenav .closebtn {
-        display: none;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
 
 
 /*Main material*/
@@ -212,10 +140,6 @@ p {
     max-height:none;
 }
 
-.container{
-
-}
-
 .banner-box{
     width: 100%;
     height: auto;
@@ -238,34 +162,12 @@ p {
     text-align: center;
 }
 
-.show {
-    display: block;
-}
-
 .footer_info {
     border-top: 6px solid darkslategray;
     padding: 20px;
     text-align: center;
     font-weight: 600;
 }
-
-.articlebox {
-    width: 1000px;
-    padding-left: 60px;
-    padding-right: 60px;
-    margin: auto;
-    border: 2px solid grey;
-    
-}
-
-.articlebox .img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-    height: auto;
-}
-
 
 
 .title {
@@ -282,7 +184,6 @@ table {
 
 .article_number{
     width: 30px;
-    
 }
 
 .dateC{
@@ -322,34 +223,6 @@ td {
     .content-box .p{
         width: 600px;
     }
-
-.previous {
-    margin-top:40px;
-    display: inline-block;
-    width: 100px;
-    padding: 4px;
-}
-
-.next {
-    margin-top: 40px;
-    display: inline-block;
-    width: 100px;
-    padding: 4px;
-}
-
-.button-box{
-    width: 1080px;
-    margin: auto;
-    text-align: center;
-}
-
-.PageNavigation {
-    font-size: 12px;
-    display: block;
-    width: auto;
-    overflow: hidden;
-}
-
 
 .portfolio-container{
     width: 100%;

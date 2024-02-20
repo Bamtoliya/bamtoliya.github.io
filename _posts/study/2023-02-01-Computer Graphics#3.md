@@ -3,7 +3,7 @@ layout: post
 title:  Computer Graphics#3
 date:   2023-02-01
 category: study
-tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
+tags: game dev portfolio 포트폴리오 Academy 학교 수업
 ---
 
 
