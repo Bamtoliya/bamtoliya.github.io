@@ -3,7 +3,7 @@ layout: post
 title:  Fetch (Web Service)
 date:   2022-12-15
 category: dev
-tag: dev, portfolio, 포트폴리오, Academy, 학교, 수업
+tags: dev portfolio 포트폴리오 Academy 학교 수업
 ---
 
 

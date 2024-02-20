@@ -1,20 +1,16 @@
 ---
 layout: default
 ---
-
+<link rel="stylesheet" href="/assets/css/post.css">
 
     <div class="article_box">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="title">{{ page.title }}</td>
-                    <td class="dateC">{{ page.date | date_to_string }}</td>
-                    <td class="author">{{page.author}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <a href="/{{page.category}}"><div id="category">{{page.category}}</div></a>
+        <div id="title">{{ page.title }}</div>
+        <div id="date">Date: {{ page.date | date_to_string }}</div>
+        
+
         {% for tag in page.tags %}
-            {{ tag }}
+            <a href="/search/?q={{tag}}"><button class="tag-button" role="button">#{{ tag }}</button></a>
         {% endfor %}
         <br />
         <br />

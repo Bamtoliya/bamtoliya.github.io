@@ -25,6 +25,16 @@ body {
     font-family: Recipekorea;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: brown;
+    text-decoration: underline;
+}
+
 header {
     background-color: gainsboro;
     width: 100%;

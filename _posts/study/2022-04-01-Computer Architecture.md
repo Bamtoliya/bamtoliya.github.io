@@ -3,7 +3,7 @@ layout: post
 title:  Computer Architecture
 date:   2022-04-01
 category: study
-tag: game, dev, portfolio, 포트폴리오, Academy, 학교, 수업
+tag: dev portfolio 포트폴리오 Academy 학교 수업
 ---
 
 

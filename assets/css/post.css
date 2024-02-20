@@ -1,0 +1,67 @@
+/* CSS for post styling */
+
+
+/* Title */
+
+#title {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+#date {
+    font-size: 14px;
+    color: grey;
+}
+
+#category {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Tag button */
+.tag-button {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+  
+  .tag-button:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+  
+  .tag-button:active {
+    outline: none;
+  }
+  
+  .tag-button:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
