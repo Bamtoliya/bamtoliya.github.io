@@ -159,3 +159,8 @@ a:hover{
 .PageNavigation a:hover{
   color: black;
 }
+
+.toc{
+  position: sticky;
+  display: block;
+}

@@ -42,6 +42,9 @@ GEM
       jekyll (>= 3.6, < 5.0)
       nokogiri (~> 1.6)
       rainbow (~> 3.0)
+    jekyll-toc (0.18.0)
+      jekyll (>= 3.9)
+      nokogiri (~> 1.12)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.4.0)
@@ -91,6 +94,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-paginate (~> 1.1.0)
   jekyll-spaceship
+  jekyll-toc
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data

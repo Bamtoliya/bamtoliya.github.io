@@ -43,7 +43,7 @@
 }
 
 .sidenav {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 230px;
     z-index: 1;
