@@ -3,7 +3,7 @@ layout: post
 title:  BDODesktop Alarm
 date:   2021-11-02
 category: dev
-tags: 검은사막 BDO BlackDesertOnline BossAlarm 한국Korean BossTimer BlackDesertAlarm
+tags: [검은사막, BDO, BlackDesertOnline, BossAlarm, 한국Korean, BossTimer, BlackDesertAlarm]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title:  Foot Placement
 date:   2021-11-02
 category: dev
-tags: game dev
+tags: [game, dev]
 ---
 
 
