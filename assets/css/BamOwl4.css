@@ -19,8 +19,8 @@
 }
 
 body {
-    background-color: gainsboro;
-    color: black;
+    background-color: #161b22;
+    color: #aaa;
     margin: 0;
     font-family: Recipekorea;
 }
@@ -36,7 +36,7 @@ a:hover{
 }
 
 header {
-    background-color: gainsboro;
+    background-color: #161b22;
     width: 100%;
     position: sticky;
     z-index: 1;
@@ -208,7 +208,7 @@ td {
 }
 
 .content-box{
-    width: 1080px;
+    width: 720px;
     margin: auto;
 }
 
@@ -229,7 +229,7 @@ td {
     min-height: 900px;
     height: auto;
     margin: auto;
-    background-color: cornsilk;
+    background-color: #161b22;
     padding: 30px;
     text-align: center;
 

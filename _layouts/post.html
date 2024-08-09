@@ -2,6 +2,8 @@
 layout: default
 ---
 
+
+
 <link rel="stylesheet" href="/assets/css/post.css">
 
     <div class="article_box">
@@ -20,21 +22,10 @@ layout: default
         <br />
     </div>
 
+    <div class="comment">
+        {% include giscus.html %}
+    </div>
+    
 
-    <script src="https://giscus.app/client.js"
-        data-repo="Bamtoliya/bamtoliya.github.io"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkyODEyOTkwNzU="
-        data-category="Announcements"
-        data-category-id="DIC_kwDOEMRIg84ChhJ4"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="ko"
-        crossorigin="anonymous"
-        async>
-    </script>
 
 {% include pagenav.html %}

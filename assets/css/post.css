@@ -157,10 +157,14 @@ a:hover{
 }
 
 .PageNavigation a:hover{
-  color: black;
+  color: Green;
 }
 
 .toc{
   position: sticky;
   display: block;
+}
+
+.comment{
+  background-color: #161b22;
 }

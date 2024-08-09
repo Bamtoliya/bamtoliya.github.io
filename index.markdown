@@ -31,7 +31,7 @@ Lastest Posts
 {% if post.category != empty %}
     <li>
         <h3>
-        <a style="text-decoration:none; color: black;" href="{{post.category}}">{{post.category}} ▶</a> 
+        <a style="text-decoration:none; color: #aaa;" href="{{post.category}}">{{post.category}} ▶</a> 
         <a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}</span></h3>      
     </li>
 {% endif %}
