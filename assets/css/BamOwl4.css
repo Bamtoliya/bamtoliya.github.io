@@ -126,10 +126,9 @@ p {
 .main-box2 {
     position: relative;
     display: inline-block;
-    width: calc(100% - 230px);
+    width: 100%;
     min-height: 1080px;
     max-height: none;
-    margin-left: 230px;
 }
 
 .main-box3 {
@@ -146,16 +145,10 @@ p {
     display: inline-block;
 }
 
-.banner-box1{
-    width: 50%;
-    float: left;
-    display: inline-block;
-    text-align: right;
-}
-
-.banner-box2 {
-    width: 50%;
-    display: inline-block;
+.banner-box{
+    max-width: 100%;
+    text-align: center;
+    display: flex;
 }
 
 .introduction {
@@ -208,7 +201,7 @@ td {
 }
 
 .content-box{
-    width: 720px;
+    max-width: 720px;
     margin: auto;
 }
 

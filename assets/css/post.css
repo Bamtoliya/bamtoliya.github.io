@@ -116,11 +116,25 @@ a:hover{
   text-align: right;
 }
 
+.left-page a{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}    
+
 .right-page{
   width: 50%;
   float: right;
   text-align: left;
 }
+
+.right-page a{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}  
 
 .left-button{
   border-radius: 24px 0px 0px 24px;
@@ -145,7 +159,7 @@ a:hover{
 }
 
 .button-box{
-  width: 1080px;
+  max-width: 720px;
   margin: auto;
   text-align: center;
 }
@@ -165,6 +179,16 @@ a:hover{
   display: block;
 }
 
-.comment{
-  background-color: #161b22;
+.highlighter-rouge {
+  color: #ce887b;
+  font-weight: 400;
+  border: 1px solid darkslategrey;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.1rem 0.5rem;
+  overflow-x: auto;
+}
+
+img{
+  max-width: 100%;
 }
