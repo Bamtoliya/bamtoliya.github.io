@@ -1,6 +1,5 @@
 ---
 layout: default
-toc: true
 ---
 
 
@@ -26,11 +25,12 @@ toc: true
     <aside>
         <div>
             {% include recent.html %}
-            {% toc %}
+            {% include toc.html html=content %}
         </div>
     </aside>
     <div class="comment">
         {% include giscus.html %}
+        
     </div>
     
 
