@@ -14,6 +14,8 @@ gem "minima", "~> 2.5"
 gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-last-modified-at"
+  gem "jekyll-toc"
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-paginate", "~> 1.1.0"
   gem "jekyll-spaceship"
@@ -31,12 +33,3 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
 gem "webrick", "~> 1.8"
-
-
-group :jekyll_plugins do
-  gem "jekyll-last-modified-at"
-end
-
-group :jekyll_plugins do
-  gem "jekyll-toc"
-end
