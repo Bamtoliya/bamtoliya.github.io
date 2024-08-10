@@ -3,8 +3,4 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-<<<<<<< HEAD
-=======
-_scripts\access.html
->>>>>>> 9452da569d982a7bd1f33c4bcfe0caaea6ae3acb
 _scripts/access.html
