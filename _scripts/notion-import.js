@@ -5,7 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const axios = require("axios");
 // or
-// import {NotionToMarkdown} from "notion-to-md";
+import {NotionToMarkdown} from "notion-to-md";
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -125,8 +125,10 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     }
     const fm = `---
 layout: post
+title: "${title}"
 date: ${date}
-title: "${title}"${fmtags}${fmcats}
+category: "${fmcats}"
+tags: ${fmtags}$
 ---
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
