@@ -121,7 +121,7 @@ p {
     width: 100%;
     min-height: 1080px;
     max-height: none;
-    overflow: hidden;
+    height: 100%;
 }
 .main-box2 {
     position: relative;
@@ -129,6 +129,7 @@ p {
     width: 100%;
     min-height: 1080px;
     max-height: none;
+    height: 100%;
 }
 
 .main-box3 {
@@ -137,6 +138,7 @@ p {
     width: 100%;
     min-height: 1080px;
     max-height:none;
+    height: 100%;
 }
 
 .banner-box{
@@ -157,9 +159,13 @@ p {
 
 .footer_info {
     border-top: 6px solid darkslategray;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     font-weight: 600;
+    width: 100%;
+    bottom: 0px;
+    background-color: #161b22;
+    position: fixed;
 }
 
 
@@ -201,21 +207,35 @@ td {
 }
 
 .content-box{
-    max-width: 720px;
+    max-width: 1080px;
     margin: auto;
+    height: 100%;
+    margin-bottom: 150px;
 }
 
     .content-box .img {
         display: block;
         text-align: center;
         margin: auto;
-        max-width: 800px;
+        max-width: auto;
         height: auto;
     }
 
     .content-box .p{
         width: 600px;
     }
+
+.wrapper{
+    max-width: 1080px;
+    margin: auto;
+    align-items: start;
+    display: grid;
+    height: 100%;
+    grid-template-areas: 'article article aside'
+    'comment comment aside'
+    'button button aside';
+    margin-bottom: 150px;
+}
 
 .portfolio-container{
     width: 100%;

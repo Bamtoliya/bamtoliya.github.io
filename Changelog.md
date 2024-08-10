@@ -5,3 +5,5 @@ YYYY/MM/DD -
 2024/02/21 - modulized basic componenets and moved to includes
 2024/02/22 -
 2024/03/04 - tags in array format
+2024/08/10 - CSS Format update, Giscus Comment System Implemented.
+2024/08/10 - Sticky toc added, format changed, add modified dates

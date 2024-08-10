@@ -4,23 +4,32 @@ layout: default
 
 
 
-<link rel="stylesheet" href="/assets/css/post.css">
+
+<div class = "wrapper">
 
     <div class="article_box">
         <a href="/{{page.category}}"><div id="category">{{page.category}}</div></a>
         <div id="title">{{ page.title }}</div>
-        <div id="date">Date: {{ page.date | date_to_string }}</div>
+        <div id="date">Date: {{ page.date | date: "%Y-%m-%d" }}</div>
+        <div id="date">Update: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M" }}</div>
         
         {% include post_tags.html %}
         
         <br />
         <br />
         
-        
         {{content}}
         <br />
         <br />
     </div>
+
+    <aside>
+        <div>
+            {% include recent.html %}
+        </div>
+        {% toc %}
+    </aside>
+    
 
     <div class="comment">
         {% include giscus.html %}
@@ -29,3 +38,4 @@ layout: default
 
 
 {% include pagenav.html %}
+</div>
