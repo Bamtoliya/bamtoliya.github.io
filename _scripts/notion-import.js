@@ -5,11 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const axios = require("axios");
 // or
-<<<<<<< HEAD
 //import {NotionToMarkdown} from "notion-to-md";
-=======
-import {NotionToMarkdown} from "notion-to-md";
->>>>>>> 9452da569d982a7bd1f33c4bcfe0caaea6ae3acb
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
