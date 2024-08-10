@@ -37,6 +37,7 @@ jobs:
 
       - run: npm install
 
+<<<<<<< HEAD
       - run: node _scripts/notion-importer.js
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
