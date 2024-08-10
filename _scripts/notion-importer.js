@@ -13,23 +13,89 @@ const notion = new Client({
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
 // Query the database and filter out unpublished entries
-const response = await notion.databases.query({
-		database_id: process.env.DATABASE_ID,
+(async () => {
+	// ensure directory exists
+	const root = path.join('_posts', 'notion')
+	fs.mkdirSync(root, { recursive: true })
+
+	const databaseId = process.env.DATABASE_ID;
+	// TODO has_more
+	const response = await notion.databases.query({
+		database_id: databaseId,
 		filter: {
-			property: "공개",
+			property: "Publish",
 			checkbox: {
 				equals: true
 			}
 		}
 	})
+	for (const r of response.results) {
+		// console.log(r)
+		const id = r.id
+		// date
+		let date = moment(r.created_time).format("YYYY-MM-DD")
+		let pdate = r.properties?.['Date']?.['date']?.['start']
+		if (pdate) {
+			date = moment(pdate).format('YYYY-MM-DD')
+		}
+		// title
+		let title = id
+		let ptitle = r.properties?.['Post']?.['title']
+		if (ptitle?.length > 0) {
+			title = ptitle[0]?.['plain_text']
+		}
+		// tags
+		let tags = []
+		let ptags = r.properties?.['Tags']?.['multi_select']
+		for (const t of ptags) {
+			const n = t?.['name']
+			if (n) {
+				tags.push(n)
+			}
+		}
+		// categories
+		let cats = []
+		let pcats = r.properties?.['Categories']?.['multi_select']
+		for (const t of pcats) {
+			const n = t?.['name']
+			if (n) {
+				tags.push(n)
+			}
+		}
+		// comments
+		const comments = r.properties?.['No Comments']?.['checkbox'] == false
+		// frontmatter
+		let fmtags = ''
+		let fmcats = ''
+		if (tags.length > 0) {
+			fmtags += '\ntags:\n'
+			for (const t of tags) {
+				fmtags += '  - ' + t + '\n'
+			}
+		}
+		if (cats.length > 0) {
+			fmcats += '\ncategories:\n'
+			for (const t of cats) {
+				fmcats += '  - ' + t + '\n'
+			}
+		}
+		const fm = `---
+                    layout: post
+                    title: ${title}
+                    category: ${fmcats}
+                    date: ${date}
+                    tags: ${fmtags}
+                    ---
+                    `
+		const mdblocks = await n2m.pageToMarkdown(id);
+		const md = n2m.toMarkdownString(mdblocks);
 
-// Iterate over the results
-for (const r of response.results) {
-
-  // build the post front matter
-
-  // convert the page to markdown
-
-  // write it to disk
-  fs.writeFile("TEST");
-}
+		//writing to file
+		const ftitle = `${date}-${title.replaceAll(' ', '-').toLowerCase()}.md`
+		fs.writeFile(path.join(root, ftitle), fm + md, (err) => {
+			if (err) {
+				console.log(err);
+			}
+		});
+	}
+})();
