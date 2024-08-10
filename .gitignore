@@ -4,3 +4,4 @@ _site
 .jekyll-metadata
 vendor
 _scripts\access.html
+_scripts/access.html
