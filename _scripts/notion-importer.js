@@ -15,8 +15,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 n2m.setCustomTransformer("video", async(block) => {
 	console.log(block);
 	const{ video } = block;
-	if(!video.url) return "";
-	return `{$ youtube ${video.url} $}`;
+	if(!video.external.url) return "";
+	return `{$ youtube ${video.external.url} $}`;
 });
 
 // Query the database and filter out unpublished entries
