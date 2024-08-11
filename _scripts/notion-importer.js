@@ -71,7 +71,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		// categories
 		let cat = r.properties?.['Category']?.['select']?.['name'];
-		const root = path.join('_posts', cat)
+		
 		// comments
 		//const comments = r.properties?.['No Comments']?.['checkbox'] == false
 
@@ -96,10 +96,13 @@ tags: [${fmtags}]
 		const md = n2m.toMarkdownString(mdblocks);
 
 		console.log(md.parent)
+		
 
 		const date = moment(r.created_time).format("YYYY-MM-DD")
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
+		const root = path.join('_posts', cat)
+
 		fs.writeFile(path.join(root, ftitle), fm + md.parent, (err) => {
 			if (err) {
 				console.log(err);
