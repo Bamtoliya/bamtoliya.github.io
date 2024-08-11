@@ -47,7 +47,7 @@ jobs:
       - name: Put current date into a variable
         run: |
           $NOW=$(date)
-          echo "NOW=$NOW" >> $vars:LAST_UPDATE
+          echo "NOW=$NOW" >> $vars.LAST_UPDATE
 
       - name: Update Repository Variable
         env:
