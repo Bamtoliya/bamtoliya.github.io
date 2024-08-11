@@ -75,7 +75,6 @@ jobs:
         with:
           ruby-version: '3.1' # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
           bundler-cache: true
-        run: bundle lock --add-platform x86_64-linux
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
