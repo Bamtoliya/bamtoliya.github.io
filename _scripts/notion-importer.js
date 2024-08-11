@@ -19,6 +19,10 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	fs.mkdirSync(root, { recursive: true })
 	console.log("Date Check")
 	console.log(process.env.LAST_UPDATE)
+	console.log(moment());
+	
+
+	//process.env.LAST_UPDATE = 
 
 	const databaseId = process.env.DATABASE_ID;
 	// TODO has_more
