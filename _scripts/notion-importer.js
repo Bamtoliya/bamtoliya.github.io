@@ -15,7 +15,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 // Query the database and filter out unpublished entries
 (async () => {
 	// ensure directory exists
-	const root = path.join('_posts', 'notion')
+	
 	fs.mkdirSync(root, { recursive: true })
 	
 	const lastUpdate = process.env.LAST_UPDATE;
@@ -71,7 +71,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		// categories
 		let cat = r.properties?.['Category']?.['select']?.['name'];
-
+		const root = path.join('_posts', cat)
 		// comments
 		//const comments = r.properties?.['No Comments']?.['checkbox'] == false
 
