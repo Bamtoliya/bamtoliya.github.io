@@ -33,8 +33,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			// 	equals: true
 			// },
 			timestamp: "created_time",
-			created_time: {
-				after: lastUpdate
+			"created_time": {
+				on_or_after: lastUpdate
 			}
 		}
 	})
