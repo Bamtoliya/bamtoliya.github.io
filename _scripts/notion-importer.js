@@ -64,14 +64,14 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			}
 		}
 		// categories
-		let cats = []
-		let pcats = r.properties?.['Category']?.['select']
-		for (const t of pcats) {
-			const n = t?.['name']
-			if (n) {
-				cats.push(n)
-			}
-		}
+		let cats = r.properties?.['Category']?.['select']?.['name']
+		let pcats = r.properties?.['Category']?.['select']?.['name']
+		// for (const t of pcats) {
+		// 	const n = t?.['name']
+		// 	if (n) {
+		// 		cats.push(n)
+		// 	}
+		// }
 		
 		// comments
 		//const comments = r.properties?.['No Comments']?.['checkbox'] == false
