@@ -14,6 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  
   importer:
     runs-on: ubuntu-latest
 
@@ -42,10 +43,11 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          node-version: "20"
           commit_message: "[배포] Notion 변경 사항 저장"
           branch: gh-pages
           commit_user_name: importer-bot 🤖
@@ -68,7 +70,9 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v1
+        with:
+          node-version: "20"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -88,7 +92,9 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v2
         with:
+          node-version: "20"
           path: "_site${{ steps.pages.outputs.base_path }}"
+
 
   deploy:
     environment:
