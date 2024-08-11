@@ -7,3 +7,4 @@ YYYY/MM/DD -
 2024/03/04 - tags in array format
 2024/08/10 - CSS Format update, Giscus Comment System Implemented.
 2024/08/10 - Sticky toc added, format changed, add modified dates
+2024/08/12 - Notion DB API linked to github pages
