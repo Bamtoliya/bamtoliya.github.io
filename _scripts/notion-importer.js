@@ -70,15 +70,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			}
 		}
 		// categories
-		let cats = []
-		let pcats = r.properties?.['Category']?.['select']
-		for (const t of pcats) {
-			const n = t?.['name']
-			if (n) {
-				cats.push(n)
-			}
-		}
-		
+		let cat = r.properties?.['Category']?.['select']?.['name'];
+
 		// comments
 		//const comments = r.properties?.['No Comments']?.['checkbox'] == false
 
@@ -91,16 +84,11 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 				fmtags += '  - ' + t + '\n'
 			}
 		}
-		if (cats.length > 0) {
-			fmcats += '\ncategory:\n'
-			for (const t of cats) {
-				fmcats += '  - ' + t + '\n'
-			}
-		}
+		
 		const fm =`---
 layout: post
 title: ${ptitle}
-category: ${fmcats}
+category: ${cat}
 date: ${cdate}
 last_modified_at: ${edate}
 ${fmtags}
