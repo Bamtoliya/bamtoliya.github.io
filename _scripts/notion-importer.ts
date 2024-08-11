@@ -15,7 +15,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 n2m.setCustomTransformer("video", async(block) => {
 	const{ video } = block as any;
 	if(!video.url) return "";
-	return `{$ youtube ${link} $}`;
+	return `{$ youtube ${video.url} $}`;
 });
 
 // Query the database and filter out unpublished entries
@@ -52,7 +52,7 @@ n2m.setCustomTransformer("video", async(block) => {
 		let cdate = moment(r.created_time).format("YYYY-MM-DD HH:mm")
 		let pcdate = r.properties?.['Date']?.['date']?.['start']
 		if (pcdate) {
-			cdate = moment(pdate).format('YYYY-MM-DD HH:mm')
+			cdate = moment(pcdate).format('YYYY-MM-DD HH:mm')
 		}
 
 		let edate = moment(r.last_edited_time).format("YYYY-MM-DD HH:mm")
