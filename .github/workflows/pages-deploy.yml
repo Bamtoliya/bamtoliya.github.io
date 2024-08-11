@@ -44,19 +44,24 @@ jobs:
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
           LAST_UPDATE: ${{ vars.LAST_UPDATE}}
 
+      - name: Put current date into a variable
+        run: |
+          $NOW=& Get-Date -format yyyy-MM-dd
+          echo "NOW=$NOW" >> $env:GITHUB_ENV
+
       - name: Update Repository Variable
         env:
           GITHUB_PAT: ${{ secrets.NOTION_TOKEN }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          NEW_VALUE: ""
+          NEW_VALUE: NOW
         run: |
-          NEW_VALUE = $(date)
+          NEW_VALUE = 
           curl -X PATCH \
             -H "Authorization: Bearer $GITHUB_PAT" \
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/actions/variables/LAST_UPDATE \
-            -d '{"name": "LAST_UPDATE", "value": "'$NEW_VALUE'"}'
+            -d '{"name": "LAST_UPDATE", "value": "$NEW_VALUE"}'
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         env:
