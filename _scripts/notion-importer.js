@@ -86,7 +86,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		const fm =`---
 layout: post
 title: ${title}
-category: ${cat}
+category: ${cat.toLowerCase()}
 date: ${cdate}
 last_modified_at: ${edate}
 tags: [${fmtags}]
