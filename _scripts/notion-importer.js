@@ -94,7 +94,9 @@ tags: [${fmtags}]
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
-		console.log(mdblocks);
+
+		console.log(md.parent)
+
 		const date = moment(r.created_time).format("YYYY-MM-DD")
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
