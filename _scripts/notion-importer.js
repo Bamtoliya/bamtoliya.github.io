@@ -32,7 +32,6 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			//property: "Update",
 		}
 	})
-	console.log(process.env.date)
 	for (const r of response.results) {
 		console.log(r)
 		// const id = r.id
