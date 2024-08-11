@@ -77,14 +77,13 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 
 		// frontmatter
 		let fmtags = ''
-		let fmcats = ''
 		if (tags.length > 0) {
 			fmtags += '\ntags:\n'
 			for (const t of tags) {
 				fmtags += '  - ' + t + '\n'
 			}
 		}
-		
+
 		const fm =`---
 layout: post
 title: ${ptitle}
@@ -96,10 +95,10 @@ ${fmtags}
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
-		console.log(mdblocks);
+		//console.log(mdblocks);
 
 		//writing to file
-		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
+		const ftitle = `${cdate}-${title.replaceAll(' ', '-')}.md`
 		fs.writeFile(path.join(root, ftitle), fm + md, (err) => {
 			if (err) {
 				console.log(err);
