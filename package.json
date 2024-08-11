@@ -4,7 +4,7 @@
         "@types/node-fetch": "^2.6.2",
         "moment": "^2.29.2",
         "node-fetch": "^2.6.7",
-        "notion-to-md": "https://github.com/Bamtoliya/notion-to-md",
+        "notion-to-md-video-youtube": "https://github.com/Bamtoliya/notion-to-md",
         "axios": "^1.4.0"
     }
 }
