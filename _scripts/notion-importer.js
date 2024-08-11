@@ -22,8 +22,6 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	console.log(moment().toDate());
 	
 	const lastUpdate = process.env.LAST_UPDATE;
-	process.env.LAST_UPDATE = moment().toDate();
-	console.log(process.env.LAST_UPDATE)
 
 	const databaseId = process.env.DATABASE_ID;
 	// TODO has_more
