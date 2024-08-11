@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@gh-pages
+      - uses: actions/checkout@master
     
       # - name: Clean Directory
       #   run: |
@@ -31,7 +31,7 @@ jobs:
       #     done
       #     rm -rf _posts/*
       
-      - uses: actions/setup-node@v20
+      - uses: actions/setup-node@v3
         with:
           node-version: "17"
 
