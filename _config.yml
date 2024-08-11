@@ -35,6 +35,7 @@ plugins:
   - jekyll-spaceship
   - jekyll-toc
   - jekyll-last-modified-at
+  - jekyll-youtube
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:

@@ -14,6 +14,7 @@ gem "minima", "~> 2.5"
 gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-youtube"
   gem "jekyll-last-modified-at"
   gem "jekyll-toc"
   gem "jekyll-feed", "~> 0.12"
