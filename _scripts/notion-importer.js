@@ -21,8 +21,9 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	console.log(process.env.LAST_UPDATE)
 	console.log(moment().toDate());
 	
+	const lastUpdate = process.env.LAST_UPDATE;
 
-	//process.env.LAST_UPDATE = 
+	process.env.LAST_UPDATE = moment().toDate();
 
 	const databaseId = process.env.DATABASE_ID;
 	// TODO has_more
@@ -32,8 +33,11 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			property: "Publish",
 			checkbox: {
 				equals: true
+			},
+			timestamp: "created_time",
+			created_time: {
+				after: lastUpdate
 			}
-			//property: "Update",
 		}
 	})
 	for (const r of response.results) {
@@ -107,4 +111,6 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		// 	}
 		// });
 	}
+
+	
 })();
