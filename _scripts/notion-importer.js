@@ -19,7 +19,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	fs.mkdirSync(root, { recursive: true })
 	console.log("Date Check")
 	console.log(process.env.LAST_UPDATE)
-	console.log(moment());
+	console.log(moment);
 	
 
 	//process.env.LAST_UPDATE = 
