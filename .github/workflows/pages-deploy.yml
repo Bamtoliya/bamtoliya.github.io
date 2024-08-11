@@ -44,12 +44,8 @@ jobs:
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
           LAST_UPDATE: ${{ vars.LAST_UPDATE}}
 
-      # - uses: mmoyaferrer/set-github-variable@v1.0.0
-      #   with:
-      #       name: 'LAST_UPDATE'
-      #       value: 'Hello World'
-      #       repository: mmoyaferrer/set-github-variable
-      #       token: ${{ secrets.REPO_ACCESS_TOKEN }}
+      - name: Set current date as repo variable
+        run: echo "NOW = $(date)"
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         env:

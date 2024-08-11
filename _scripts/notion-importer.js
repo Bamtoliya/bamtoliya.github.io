@@ -35,17 +35,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 					"last_edited_time": {
 						on_or_after: lastUpdate
 					}
-				}
-				// {
-				// 	"or" : [
-				// 		{
-				// 			timestamp: "created_time",
-				// 			"created_time": {
-				// 				on_or_after: lastUpdate
-				// 			}
-				// 		}
-				// 	]
-				// }
+				}				
 			]			
 		}
 	})
