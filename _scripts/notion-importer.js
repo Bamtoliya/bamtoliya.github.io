@@ -96,9 +96,9 @@ ${fmtags}
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
 		//console.log(mdblocks);
-
+		const date = moment(r.created_time).format("YYYY-MM-DD")
 		//writing to file
-		const ftitle = `${cdate}-${title.replaceAll(' ', '-')}.md`
+		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
 		fs.writeFile(path.join(root, ftitle), fm + md, (err) => {
 			if (err) {
 				console.log(err);
