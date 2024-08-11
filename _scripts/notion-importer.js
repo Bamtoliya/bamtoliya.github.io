@@ -43,16 +43,10 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 						"last_edited_time": {
 							on_or_after: lastUpdate
 						}
-					},
-
+					}
 					]
 				}
-			]
-
-
-
-
-			
+			]			
 		}
 	})
 	for (const r of response.results) {
