@@ -15,7 +15,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 // Query the database and filter out unpublished entries
 (async () => {
 	// ensure directory exists
-	const root = path.join('_posts')
+	let root = path.join('_posts')
 	fs.mkdirSync(root, { recursive: true })
 	
 	const lastUpdate = process.env.LAST_UPDATE;
@@ -102,8 +102,8 @@ tags: [${fmtags}]
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
 		
-		root = path.join('_posts', cat)
-		fs.writeFile(path.join(root, ftitle), fm + md.parent, (err) => {
+		const rt = path.join('_posts', cat)
+		fs.writeFile(path.join(rt, ftitle), fm + md.parent, (err) => {
 			if (err) {
 				console.log(err);
 			}
