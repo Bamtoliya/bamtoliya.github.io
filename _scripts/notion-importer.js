@@ -43,7 +43,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		console.log(r)
 		const id = r.id
 		// date
-		let cdate = r.created_time.format("YYYY-MM-DD HH:MM")
+		
+		let cdate = formatDate(r.created_time, "YYYY-MM-DD HH:MM")
 		let pcdate = r.properties?.['Date']?.['date']?.['start']
 		if (pcdate) {
 			cdate = pdate.format('YYYY-MM-DD HH:MM')
