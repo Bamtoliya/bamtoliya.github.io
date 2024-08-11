@@ -12,7 +12,7 @@ const notion = new Client({
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
-console.log(process.env.Last_Update)
+console.log(process.env.LAST_UPDATE)
 
 // Query the database and filter out unpublished entries
 (async () => {
