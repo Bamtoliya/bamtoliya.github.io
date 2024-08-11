@@ -12,6 +12,8 @@ const notion = new Client({
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
+console.log(process.env.Last_Update)
+
 // Query the database and filter out unpublished entries
 (async () => {
 	// ensure directory exists
@@ -27,8 +29,10 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			checkbox: {
 				equals: true
 			}
+			//property: "Update",
 		}
 	})
+	console.log(process.env.date)
 	for (const r of response.results) {
 		console.log(r)
 		// const id = r.id
@@ -92,7 +96,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		// const mdblocks = await n2m.pageToMarkdown(id);
 		// const md = n2m.toMarkdownString(mdblocks);
 
-		// //writing to file
+		//writing to file
 		// const ftitle = `${date}-${title.replaceAll(' ', '-').toLowerCase()}.md`
 		// fs.writeFile(path.join(root, ftitle), fm + md, (err) => {
 		// 	if (err) {
