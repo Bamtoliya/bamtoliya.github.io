@@ -18,20 +18,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@gh-pages
     
-      - name: Clean Directory
-        run: |
-          for file in assets/img/*
-          do
-              if [[ $file != "assets/img/favicons" ]]
-              then
-                  rm -rf "$file"
-              fi
-          done
-          rm -rf _posts/*
+      # - name: Clean Directory
+      #   run: |
+      #     for file in assets/img/*
+      #     do
+      #         if [[ $file != "assets/img/favicons" ]]
+      #         then
+      #             rm -rf "$file"
+      #         fi
+      #     done
+      #     rm -rf _posts/*
       
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v20
         with:
           node-version: "17"
 
@@ -99,4 +99,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v20
