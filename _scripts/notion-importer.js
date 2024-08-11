@@ -46,6 +46,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		let cdate = moment(r.created_time).format("YYYY-MM-DD HH:MM")
 		console.log(r.created_time)
 		console.log(cdate);
+		console.log(moment(r.created_time))
 		let pcdate = r.properties?.['Date']?.['date']?.['start']
 		if (pcdate) {
 			cdate = moment(pdate).format('YYYY-MM-DD HH:MM')
