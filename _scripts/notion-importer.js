@@ -17,25 +17,26 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	// ensure directory exists
 	const root = path.join('_posts', 'notion')
 	fs.mkdirSync(root, { recursive: true })
-	console.log("Date Check")
-	console.log(process.env.LAST_UPDATE)
-	console.log(moment().toDate());
 	
 	const lastUpdate = process.env.LAST_UPDATE;
-
 	const databaseId = process.env.DATABASE_ID;
 	// TODO has_more
 	const response = await notion.databases.query({
 		database_id: databaseId,
 		filter: {
-			// property: "Publish",
-			// checkbox: {
-			// 	equals: true
-			// },
-			timestamp: "created_time",
-			"created_time": {
-				on_or_after: lastUpdate
-			}
+			"and" : [
+				{
+					property: "Publish",
+					checkbox: {
+						equals: true
+					}
+				},{
+					timestamp: "created_time",
+					"created_time": {
+						on_or_after: lastUpdate
+					}
+				}
+			]
 		}
 	})
 	for (const r of response.results) {
