@@ -12,13 +12,12 @@ const notion = new Client({
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
-console.log(process.env.LAST_UPDATE)
-
 // Query the database and filter out unpublished entries
 (async () => {
 	// ensure directory exists
 	const root = path.join('_posts', 'notion')
 	fs.mkdirSync(root, { recursive: true })
+	console.log(process.env.LAST_UPDATE)
 
 	const databaseId = process.env.DATABASE_ID;
 	// TODO has_more
