@@ -46,13 +46,13 @@ jobs:
 
       - name: Get Current Date and Time
         id: date
-        run:
+        run: |
           echo "CURRENT_DATE_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_ENV
           echo ${{env.CURRENT_DAT_TIME}}
 
       - name: Update Repository Variable
         env:
-          GITHUB_PAT: ${{ secrets.NOTION_TOKEN }}
+          GITHUB_PAT: ${{ secrets.PAT }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
           VARIABLE_NAME: "LAST_UPDATE"  # 설정할 변수의 이름
