@@ -17,6 +17,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	// ensure directory exists
 	const root = path.join('_posts', 'notion')
 	fs.mkdirSync(root, { recursive: true })
+	console.log("Date Check")
 	console.log(process.env.LAST_UPDATE)
 
 	const databaseId = process.env.DATABASE_ID;
