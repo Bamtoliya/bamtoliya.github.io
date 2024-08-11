@@ -1,6 +1,0 @@
-# Computer Architecture
-
-
-## Interpreter
-
-## Compiler
