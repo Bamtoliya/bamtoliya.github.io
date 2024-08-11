@@ -43,16 +43,16 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		console.log(r)
 		const id = r.id
 		// date
-		let cdate = moment(r.created_time).format("YYYY-MM-DD HH:MM")
+		let cdate = r.created_time.format("YYYY-MM-DD HH:MM")
 		let pcdate = r.properties?.['Date']?.['date']?.['start']
 		if (pcdate) {
-			cdate = moment(pdate).format('YYYY-MM-DD HH:MM')
+			cdate = pdate.format('YYYY-MM-DD HH:MM')
 		}
 
-		let edate = moment(r.last_edited_time).format("YYYY-MM-DD HH:MM")
+		let edate = r.last_edited_time.format("YYYY-MM-DD HH:MM")
 		let pedate = r.properties?.['Date']?.['date']?.['start']
 		if (pedate) {
-			edate = moment(edate).format('YYYY-MM-DD HH:MM')
+			edate = edate.format('YYYY-MM-DD HH:MM')
 		}
 		// title
 		let title = id
