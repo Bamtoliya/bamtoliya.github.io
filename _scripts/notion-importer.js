@@ -24,27 +24,24 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 	const response = await notion.databases.query({
 		database_id: databaseId,
 		filter: {
-			timestamp: "created_time",
-			"created_time": {
-				on_or_after: lastUpdate
-			}		
-			// "and" : [
-			// 	{
-			// 		property: "Publish",
-			// 		checkbox: {
-			// 			equals: true
-			// 		}
-			// 	},
-			// 	{"or" : [
-			// 		{
-			// 			timestamp: "created_time",
-			// 			"created_time": {
-			// 				on_or_after: lastUpdate
-			// 			}
-			// 		}
-			// 		]
-			// 	}
-			// ]			
+			"and" : [
+				{
+					property: "Publish",
+					checkbox: {
+						equals: true
+					}
+				},
+				{
+					"or" : [
+						{
+							timestamp: "created_time",
+							"created_time": {
+								on_or_after: lastUpdate
+							}
+						}
+					]
+				}
+			]			
 		}
 	})
 	for (const r of response.results) {
