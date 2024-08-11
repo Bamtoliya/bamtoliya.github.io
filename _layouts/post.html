@@ -10,7 +10,7 @@ layout: default
     <div class="article_box">
         <a href="/{{page.category}}"><div id="category">{{page.category}}</div></a>
         <div id="title">{{ page.title }}</div>
-        <div id="date">Date: {{ page.date | date: "%Y-%m-%d" }}</div>
+        <div id="date">Date: {{ page.date | date: "%Y-%m-%d %H:%M" }}</div>
         <div id="date">Update: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M" }}</div>
         
         {% include post_tags.html %}

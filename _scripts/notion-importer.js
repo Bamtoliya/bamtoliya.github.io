@@ -87,7 +87,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			}
 		}
 		if (cats.length > 0) {
-			fmcats += '\ncategories:\n'
+			fmcats += '\ncategory:\n'
 			for (const t of cats) {
 				fmcats += '  - ' + t + '\n'
 			}

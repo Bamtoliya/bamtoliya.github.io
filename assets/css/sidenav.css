@@ -55,6 +55,8 @@
 }
 
 .sidenav a {
+    max-width: 360px;
+    text-overflow: ellipsis;
     display: inline-block;
     padding: 8px 8px 8px 8px;
     margin-top: 5px;
