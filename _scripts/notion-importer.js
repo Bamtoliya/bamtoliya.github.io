@@ -92,14 +92,14 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 				fmcats += '  - ' + t + '\n'
 			}
 		}
-		const fm = `---
-                    layout: post
-                    title: ${ptitle}
-                    category: ${fmcats}
-                    date: ${date}
-                    ${fmtags}
-                    ---
-                    `
+		const fm =`---
+layout: post
+title: ${ptitle}
+category: ${fmcats}
+date: ${date}
+${fmtags}
+---
+`
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
 		console.log(mdblocks);
