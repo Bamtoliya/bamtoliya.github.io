@@ -56,7 +56,6 @@ jobs:
           VARIABLE_NAME: "LAST_UPDATE"  # 설정할 변수의 이름
           VARIABLE_VALUE: ${{ env.CURRENT_DATE_TIME }}  # 현재 시간과 날짜
         run: |
-          NEW_VALUE = 
           curl -X PATCH \
             -H "Authorization: Bearer $GITHUB_PAT" \
             -H "Accept: application/vnd.github+json" \
