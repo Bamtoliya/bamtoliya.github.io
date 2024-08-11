@@ -45,7 +45,7 @@ jobs:
           LAST_UPDATE: ${{ vars.LAST_UPDATE}}
 
       - name: Set current date as repo variable
-        run: echo "NOW = $(date)" >> ${{vars.LAST_UPDATE}}
+        run: $vars.LAST_UPDATE = $(date)
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         env:
