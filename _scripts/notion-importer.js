@@ -43,12 +43,17 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		console.log(r)
 		const id = r.id
 		// date
-		let date = moment(r.created_time).format("YYYY-MM-DD")
-		let pdate = r.properties?.['Date']?.['date']?.['start']
-		if (pdate) {
-			date = moment(pdate).format('YYYY-MM-DD')
+		let cdate = moment(r.created_time).format("YYYY-MM-DD HH:MM")
+		let pcdate = r.properties?.['Date']?.['date']?.['start']
+		if (pcdate) {
+			cdate = moment(pdate).format('YYYY-MM-DD HH:MM')
 		}
 
+		let edate = moment(r.last_edited_time).format("YYYY-MM-DD HH:MM")
+		let pedate = r.properties?.['Date']?.['date']?.['start']
+		if (pedate) {
+			edate = moment(edate).format('YYYY-MM-DD HH:MM')
+		}
 		// title
 		let title = id
 		let ptitle = r.properties?.['Post']?.['title']
@@ -66,7 +71,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		// categories
 		let cats = []
-		let pcats = r.properties?.['Category']?.['select']?.['name']
+		let pcats = r.properties?.['Category']?.['select']
 		for (const t of pcats) {
 			const n = t?.['name']
 			if (n) {
@@ -96,7 +101,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 layout: post
 title: ${ptitle}
 category: ${fmcats}
-date: ${date}
+date: ${cdate}
+last_modified_at: ${edate}
 ${fmtags}
 ---
 `
