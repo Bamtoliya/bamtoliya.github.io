@@ -102,7 +102,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
                     `
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
-		console.log(md);
+		console.log(mdblocks);
 
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
