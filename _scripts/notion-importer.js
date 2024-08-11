@@ -102,7 +102,7 @@ tags: [${fmtags}]
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
 		
-		const rt = path.join('_posts', cat)
+		const rt = path.join('_posts', cat.toLowerCase())
 		fs.writeFile(path.join(rt, ftitle), fm + md.parent, (err) => {
 			if (err) {
 				console.log(err);
