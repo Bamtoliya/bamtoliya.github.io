@@ -56,7 +56,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		// title
 		let title = id
-		let ptitle = r.properties?.['Post']?.['title']
+		let ptitle = r.properties?.['title']
 		if (ptitle?.length > 0) {
 			title = ptitle[0]?.['plain_text']
 		}
@@ -78,9 +78,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		// frontmatter
 		let fmtags = ''
 		if (tags.length > 0) {
-			fmtags += '\ntags:\n'
 			for (const t of tags) {
-				fmtags += '  - ' + t + '\n'
+				fmtags += t + ','
 			}
 		}
 
@@ -90,12 +89,12 @@ title: ${ptitle}
 category: ${cat}
 date: ${cdate}
 last_modified_at: ${edate}
-${fmtags}
+tags: [${fmtags}]
 ---
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
-		//console.log(mdblocks);
+		console.log(md);
 		const date = moment(r.created_time).format("YYYY-MM-DD")
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
