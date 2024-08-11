@@ -30,17 +30,22 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 					checkbox: {
 						equals: true
 					}
-				},
-				{
-					"or" : [
-						{
-							timestamp: "created_time",
-							"created_time": {
-								on_or_after: lastUpdate
-							}
-						}
-					]
+				},{
+					timestamp: "last_edited_time",
+					"last_edited_time": {
+						on_or_after: lastUpdate
+					}
 				}
+				// {
+				// 	"or" : [
+				// 		{
+				// 			timestamp: "created_time",
+				// 			"created_time": {
+				// 				on_or_after: lastUpdate
+				// 			}
+				// 		}
+				// 	]
+				// }
 			]			
 		}
 	})
