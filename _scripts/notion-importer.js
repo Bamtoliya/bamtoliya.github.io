@@ -12,11 +12,13 @@ const notion = new Client({
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
+
+// Custom Transformer for Youtube embeded video for Jekyll
 n2m.setCustomTransformer("video", async(block) => {
-	console.log(block);
+	//console.log(block);
 	const{ video } = block;
 	if(!video.external.url) return "";
-	return `{$ youtube ${video.external.url} $}`;
+	return `{% youtube "${video.external.url}" %}`;
 });
 
 // Query the database and filter out unpublished entries
