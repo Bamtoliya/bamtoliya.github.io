@@ -48,6 +48,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		if (pdate) {
 			date = moment(pdate).format('YYYY-MM-DD')
 		}
+
 		// title
 		let title = id
 		let ptitle = r.properties?.['Post']?.['title']
@@ -64,14 +65,14 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 			}
 		}
 		// categories
-		let cats = r.properties?.['Category']?.['select']?.['name']
+		let cats = []
 		let pcats = r.properties?.['Category']?.['select']?.['name']
-		// for (const t of pcats) {
-		// 	const n = t?.['name']
-		// 	if (n) {
-		// 		cats.push(n)
-		// 	}
-		// }
+		for (const t of pcats) {
+			const n = t?.['name']
+			if (n) {
+				cats.push(n)
+			}
+		}
 		
 		// comments
 		//const comments = r.properties?.['No Comments']?.['checkbox'] == false
@@ -93,10 +94,10 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		const fm = `---
                     layout: post
-                    title: ${title}
+                    title: ${ptitle}
                     category: ${fmcats}
                     date: ${date}
-                    tags: ${fmtags}
+                    ${fmtags}
                     ---
                     `
 		const mdblocks = await n2m.pageToMarkdown(id);
