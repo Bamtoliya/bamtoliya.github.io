@@ -95,7 +95,7 @@ tags: [${fmtags}]
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const md = n2m.toMarkdownString(mdblocks);
 
-		console.log(md.parent)
+		console.log(md)
 		
 		
 		const date = moment(r.created_time).format("YYYY-MM-DD")
