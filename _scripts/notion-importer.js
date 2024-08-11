@@ -65,7 +65,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		// categories
 		let cats = []
-		let pcats = r.properties?.['Categories']?.['multi_select']
+		let pcats = r.properties?.['Category']?.['select']
 		for (const t of pcats) {
 			const n = t?.['name']
 			if (n) {
