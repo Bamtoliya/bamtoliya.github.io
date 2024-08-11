@@ -100,7 +100,7 @@ tags: [${fmtags}]
 		const date = moment(r.created_time).format("YYYY-MM-DD")
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
-		fs.writeFile(path.join(root, ftitle), fm + md, (err) => {
+		fs.writeFile(path.join(root, ftitle), fm + md.parent, (err) => {
 			if (err) {
 				console.log(err);
 			}
