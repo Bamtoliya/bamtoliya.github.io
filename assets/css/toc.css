@@ -12,6 +12,14 @@
     align-self: start;
 }
 
+.section-nav ul{
+    
+}
+
+.section-nav li{
+    
+}
+
 aside{
     position: -webkit-sticky;
     position: sticky;
@@ -19,3 +27,4 @@ aside{
     top: 100px;
     grid-area: aside;
 }
+
