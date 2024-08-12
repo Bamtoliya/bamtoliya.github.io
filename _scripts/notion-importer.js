@@ -110,11 +110,11 @@ tags: [${fmtags}]
 ---
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
-		const md = n2m.toMarkdownString(mdblocks)["parent"];
+		let md = n2m.toMarkdownString(mdblocks)["parent"];
 		if(md == "") {
 			continue;
 		}
-		
+
 		md = escapeCodeBlock(md);
 		
 		const date = moment(r.created_time).format("YYYY-MM-DD")
