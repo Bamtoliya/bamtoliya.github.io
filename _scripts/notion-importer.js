@@ -3,11 +3,19 @@ const { NotionToMarkdown } = require("notion-to-md");
 const moment = require('moment');
 const path = require('path');
 const fs = require('fs');
+const { escape } = require("querystring");
 
 // Create a Notion client from an environment variable
 const notion = new Client({
 	auth: process.env.NOTION_TOKEN,
 });
+
+function escapeCodeBlock(body) {
+	const regex = /```([\s\S]*?)```/g;
+	return body.replace(regex, function (match, htmlBlock) {
+	  return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
+	});
+  }
 
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
@@ -102,17 +110,19 @@ tags: [${fmtags}]
 ---
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
-		const md = n2m.toMarkdownString(mdblocks);
-		console.log(mdblocks)
-		console.log(md)
+		const md = n2m.toMarkdownString(mdblocks)["parent"];
+		if(md == "") {
+			continue;
+		}
 		
+		md = escapeCodeBlock(md);
 		
 		const date = moment(r.created_time).format("YYYY-MM-DD")
 		//writing to file
 		const ftitle = `${date}-${title.replaceAll(' ', '-')}.md`
 		
 		const rt = path.join('_posts', cat.toLowerCase())
-		fs.writeFile(path.join(rt, ftitle), fm + md.parent, (err) => {
+		fs.writeFile(path.join(rt, ftitle), fm + md, (err) => {
 			if (err) {
 				console.log(err);
 			}
