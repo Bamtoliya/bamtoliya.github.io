@@ -184,6 +184,7 @@ a:hover{
 }
 
 .button-box{
+  min-width: 720px;
   max-width: 720px;
   margin: auto;
   text-align: center;
@@ -193,7 +194,7 @@ a:hover{
 .PageNavigation {
   font-size: 12px;
   width: auto;
-  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .PageNavigation a:hover{
