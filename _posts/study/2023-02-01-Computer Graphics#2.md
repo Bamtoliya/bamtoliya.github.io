@@ -75,6 +75,8 @@ Lighting GetPointLight(PointLight light, float3 pos3D, float3 viewDir, float3 no
 	return OUT;
 }
 ~~~
+
+![alt text](vscode-remote://wsl%2Bubuntu/home/mcha/cmsc435/proj2/test.png)
 from [wikipedia.org](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model)
 
 
