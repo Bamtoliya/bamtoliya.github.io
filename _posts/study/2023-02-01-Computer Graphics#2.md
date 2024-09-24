@@ -75,6 +75,8 @@ Lighting GetPointLight(PointLight light, float3 pos3D, float3 viewDir, float3 no
 	return OUT;
 }
 ~~~
+
+<img class="img" src="../../assets/img/study/trace2.png">
 from [wikipedia.org](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model)
 
 
