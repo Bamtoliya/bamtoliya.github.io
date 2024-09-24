@@ -19,8 +19,8 @@
 }
 
 body {
-    background-color: gainsboro;
-    color: black;
+    background-color: #161b22;
+    color: #aaa;
     margin: 0;
     font-family: Recipekorea;
 }
@@ -36,7 +36,7 @@ a:hover{
 }
 
 header {
-    background-color: gainsboro;
+    background-color: #161b22;
     width: 100%;
     position: sticky;
     z-index: 1;
@@ -121,15 +121,15 @@ p {
     width: 100%;
     min-height: 1080px;
     max-height: none;
-    overflow: hidden;
+    height: 100%;
 }
 .main-box2 {
     position: relative;
     display: inline-block;
-    width: calc(100% - 230px);
+    width: 100%;
     min-height: 1080px;
     max-height: none;
-    margin-left: 230px;
+    height: 100%;
 }
 
 .main-box3 {
@@ -138,6 +138,7 @@ p {
     width: 100%;
     min-height: 1080px;
     max-height:none;
+    height: 100%;
 }
 
 .banner-box{
@@ -146,16 +147,10 @@ p {
     display: inline-block;
 }
 
-.banner-box1{
-    width: 50%;
-    float: left;
-    display: inline-block;
-    text-align: right;
-}
-
-.banner-box2 {
-    width: 50%;
-    display: inline-block;
+.banner-box{
+    max-width: 100%;
+    text-align: center;
+    display: flex;
 }
 
 .introduction {
@@ -164,9 +159,13 @@ p {
 
 .footer_info {
     border-top: 6px solid darkslategray;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     font-weight: 600;
+    width: 100%;
+    bottom: 0px;
+    background-color: #161b22;
+    position: fixed;
 }
 
 
@@ -208,15 +207,17 @@ td {
 }
 
 .content-box{
-    width: 1080px;
+    max-width: 1080px;
     margin: auto;
+    height: 100%;
+    margin-bottom: 150px;
 }
 
     .content-box .img {
         display: block;
         text-align: center;
         margin: auto;
-        max-width: 800px;
+        max-width: auto;
         height: auto;
     }
 
@@ -224,12 +225,24 @@ td {
         width: 600px;
     }
 
+.wrapper{
+    max-width: 1080px;
+    margin: auto;
+    align-items: start;
+    display: grid;
+    height: 100%;
+    grid-template-areas: 'article article aside'
+    'comment comment aside'
+    'button button aside';
+    margin-bottom: 150px;
+}
+
 .portfolio-container{
     width: 100%;
     min-height: 900px;
     height: auto;
     margin: auto;
-    background-color: cornsilk;
+    background-color: #161b22;
     padding: 30px;
     text-align: center;
 

@@ -1,7 +1,21 @@
 #toc{
-    
+    background-color: #0d1117;
 }
 
-.section-nav{
+.section-nav {
+    max-width: 360px;
+    height: auto;
+    background-color: #0d1117;
+    padding: 10px 30px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    align-self: start;
+}
 
+aside{
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: start;
+    top: 100px;
+    grid-area: aside;
 }

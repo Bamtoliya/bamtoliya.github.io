@@ -4,6 +4,7 @@ title:  UI Project
 date:   2022-11-28
 category: dev
 tags: [game, dev, portfolio, 포트폴리오, Academy, 학교, 수업]
+toc: true
 ---
 
 <img class="img" src ="../../assets/img/dev/UIProjectThumbnail.png">

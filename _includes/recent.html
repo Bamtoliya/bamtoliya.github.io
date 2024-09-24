@@ -1,0 +1,9 @@
+Recent Posts:
+{% for post in site.posts limit: 5 %}
+{% if post.category != empty %}
+    <li>
+        <a style="text-decoration:none; color: #aaa;" href="{{post.category}}">{{post.category}}/</a> 
+        <a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}</span>
+    </li>
+{% endif %}
+{% endfor %}

@@ -5,11 +5,6 @@ layout: default
 
 <section class="banner">
     <div class="banner-box1">
-        <a href="https://twitch.tv/bamtoliya">
-            <img src="assets\img\Twitch_Purple_RGB.gif" />
-        </a>
-    </div><!---Twitch banner and link-->
-    <div class="banner-box2">
         <a href="https://www.youtube.com/channel/UCxLKxVXG1lG3YLZTctRybng">
             <img src="assets\img\Youtube-Banner.gif" />
         </a>
@@ -31,7 +26,7 @@ Lastest Posts
 {% if post.category != empty %}
     <li>
         <h3>
-        <a style="text-decoration:none; color: black;" href="{{post.category}}">{{post.category}} ▶</a> 
+        <a style="text-decoration:none; color: #aaa;" href="{{post.category}}">{{post.category}} ▶</a> 
         <a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}</span></h3>      
     </li>
 {% endif %}

@@ -45,7 +45,7 @@ http://www.tipue.com/search
      box-shadow: none; 
      width: 100%;     
 	outline: 0;
-	margin: 0;
+	margin: 5px 0px 0px 0px;
 }
 .tipue_search_icon
 {
@@ -68,13 +68,13 @@ http://www.tipue.com/search
 
 #tipue_search_content
 {
-     max-width: 750px;
+     max-width: 720px;
 	padding-top: 15px;
 	margin: 0;
 }
 #tipue_search_results_count
 {
-	color: #333;
+	color: #aaa;
 }
 #tipue_search_warning
 {
@@ -98,7 +98,7 @@ http://www.tipue.com/search
 }
 .tipue_search_content_title a
 {
-     color: black;
+     color: #aaa;
      text-decoration: none;
 }
 .tipue_search_content_title a:hover

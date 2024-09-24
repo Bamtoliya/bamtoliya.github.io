@@ -1,6 +1,7 @@
 ---
 title: BamOwl Blog
 layout: default
+permalink: /blog/
 ---
 <link rel="stylesheet" href="/assets/css/category.css">
 

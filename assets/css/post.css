@@ -72,10 +72,14 @@ a:hover{
 
 
   .article_box{
+    max-width: 720px;
     min-height: 600px;
+    grid-area: article;
   }
-
-
+  
+  .comment{
+    grid-area: comment;
+  }
 
   /* page button */
 .page-button {
@@ -116,11 +120,25 @@ a:hover{
   text-align: right;
 }
 
+.left-page a{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}    
+
 .right-page{
   width: 50%;
   float: right;
   text-align: left;
 }
+
+.right-page a{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}  
 
 .left-button{
   border-radius: 24px 0px 0px 24px;
@@ -145,9 +163,10 @@ a:hover{
 }
 
 .button-box{
-  width: 1080px;
+  max-width: 720px;
   margin: auto;
   text-align: center;
+  grid-area: button;
 }
 
 .PageNavigation {
@@ -157,10 +176,26 @@ a:hover{
 }
 
 .PageNavigation a:hover{
-  color: black;
+  color: Green;
 }
 
-.toc{
-  position: sticky;
-  display: block;
+.highlighter-rouge {
+  color: #ce887b;
+  font-weight: 400;
+  border: 1px solid #666;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.1rem 0.5rem;
+  overflow-x: auto;
+  background-color: #333;
+  display: grid;
 }
+
+.highlight{
+  background-color: #333;
+}
+
+img{
+  max-width: 100%;
+}
+
