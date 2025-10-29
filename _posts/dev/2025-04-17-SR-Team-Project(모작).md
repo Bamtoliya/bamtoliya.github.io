@@ -3,7 +3,7 @@ layout: post
 title: SR Team Project(모작)
 category: dev
 date: 2025-04-17 05:58
-last_modified_at: 2025-10-29 06:24
+last_modified_at: 2025-10-29 08:40
 tags: [Dev,Study,Game,픽셀아트,Dot,모작,]
 ---
 
@@ -13,13 +13,16 @@ tags: [Dev,Study,Game,픽셀아트,Dot,모작,]
 # 모작 대상: Project Warlock
 
 
+![](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/893680/header.jpg?t=1759749981)
+
+
 [bookmark](https://store.steampowered.com/app/893680/Project_Warlock/)
 
 
 ## 작업 인원: 4명
 
 
-## 작업 기간: 약 1달
+## 작업 기간: 2025-02-27 ~ 2025-04-17 (약 6주)
 
 
 ## 기술 스택
@@ -121,7 +124,11 @@ Z값을 쓰고 읽어 들여, 객체들이 다른 객체에 가려질 수 있게
 
 {% raw %}
 ```c++
- 여기에 사용한 렌더링 스테이트 넣기
+	RS_LIGHTING = FALSE;
+	RS_CULLMODE = D3DCULL_NONE;
+	RS_ALPHATESTENABLE = TRUE;
+	RS_ALPHAFUNC = D3DCMP_GREATER; // 알파 값이 기준보다 크면 픽셀 렌더링
+	RS_ALPHAREF = 200; // 기준값 설정 (0~255)
 ```
 {% endraw %}
 
@@ -133,7 +140,33 @@ Z값을 쓰고 읽어 들여, 객체들이 다른 객체에 가려질 수 있게
 
 {% raw %}
 ```c++
-ㅇㅕ기에 소팅 알고리즘 넣기
+m_RenderObjects[RG_BLEND].sort([cameraTransform](CGameObject* a, CGameObject* b) -> bool {
+					// 입력 유효성 검사 (선택 사항이지만 권장)
+					if (!a || !b) return false; // 혹은 다른 규칙 적용 (예: nullptr을 뒤로 보내기)
+					CTransform* transformA = static_cast<CTransform*>(a->Get_Component(L"Com_Transform"));
+					CTransform* transformB = static_cast<CTransform*>(b->Get_Component(L"Com_Transform"));
+					if (!transformA || !transformB) return false; // 위와 동일
+
+					// 각 게임 오브젝트의 월드 위치 가져오기
+					_float3 posA = transformA->Get_State(CTransform::STATE_POSITION);
+					_float3 posB = transformB->Get_State(CTransform::STATE_POSITION);
+					_float3 posC = cameraTransform->Get_State(CTransform::STATE_POSITION);
+
+					// 카메라로부터 각 오브젝트까지의 거리 '제곱' 계산
+					// 제곱 거리를 사용하는 이유: sqrt() 함수 호출보다 훨씬 빠르며, 크기 비교 목적으론 충분함
+					// YourVectorType은 D3DXVECTOR3 또는 사용하는 벡터 라이브러리에 맞춰 변경
+
+					_float3 CtoA = posC - posA;
+					_float3 CtoB = posC - posB;
+
+					_float distSqA = D3DXVec3LengthSq(&CtoA); // 아래 Helper 함수 참조
+					_float distSqB = D3DXVec3LengthSq(&CtoB); // 아래 Helper 함수 참조
+
+					// back-to-front 정렬: 거리 제곱이 큰 쪽(더 먼 쪽)이 먼저 오도록 함
+					return distSqA > distSqB;
+					// front-to-back 정렬 (가까운 순서)을 원하면: return distSqA < distSqB;
+					});
+			}
 ```
 {% endraw %}
 
@@ -148,7 +181,9 @@ Z값을 쓰고 읽어 들여, 객체들이 다른 객체에 가려질 수 있게
 
 {% raw %}
 ```c++
-ㅅㅏ용한 렌더 스테이트 넣기
+	RS_ALPHABLENDENABLE = TRUE;
+	RS_SRCBLEND = D3DBLEND_SRCALPHA;
+	RS_DESTBLEND = D3DBLEND_INVSRCALPHA;
 ```
 {% endraw %}
 
@@ -186,7 +221,8 @@ Z값을 쓰고 읽어 들여, 객체들이 다른 객체에 가려질 수 있게
 
 대부분의 파티클은 포인트 스프라이트로 그리기 때문에 함수 호출을 줄이기위해 세그먼트 방식을 채용했다.
 
-1. 
+1. Snow
+2. Hit
 
 BloodStain
 
