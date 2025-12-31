@@ -3,7 +3,7 @@ layout: post
 title: SR Team Project(모작)
 category: dev
 date: 2025-04-17 05:58
-last_modified_at: 2025-10-29 08:40
+last_modified_at: 2025-10-29 11:56
 tags: [Dev,Study,Game,픽셀아트,Dot,모작,]
 ---
 
@@ -57,7 +57,7 @@ tags: [Dev,Study,Game,픽셀아트,Dot,모작,]
 ## 프레임워크
 
 
-Entity-Component-System(ECS) 에 가까운 프레임워크를 작성하여 사용했으며 필요한 시스템들을 싱글턴 으로 선언했고, Engine DLL을 따로 작성하여 두개의 프로젝트로 관리했다. 대부분의 기초 컴포넌트와 시스템들을 엔진에서 작성후 동적 라이브러리화 해서 클라이언트에서 접근 가능하게 했으며 모든 시스템을 가지고 있는 싱글턴 인스턴스 하나만 접근 가능하게 했다.  고정 렌더링 파이프 라인과 쉐이더를 혼용해서 사용했으며, 필요한 객체에 쉐이더 컴포넌트를 추가해서 쉐이더에게 렌더링 과정을 넘겼다.
+Entity-Component-System(ECS) 에 가까운 프레임워크를 작성하여 사용했으며 필요한 시스템들을 싱글턴 으로 선언했고, Engine DLL을 따로 작성하여 두개의 프로젝트로 관리했다. 대부분의 기초 컴포넌트와 시스템들을 엔진에서 작성후 동적 라이브러리화 해서 클라이언트에서 접근 가능하게 했으며 모든 시스템을 가지고 있는 싱글턴 인스턴스 하나만 접근 가능하게 했다. 고정 렌더링 파이프 라인과 쉐이더를 혼용해서 사용했으며, 필요한 객체에 쉐이더 컴포넌트를 추가해서 쉐이더에게 렌더링 과정을 넘겼다.
 
 
 ## 렌더
@@ -68,10 +68,10 @@ Entity-Component-System(ECS) 에 가까운 프레임워크를 작성하여 사�
 
 대략적인 그룹과 순서는 다음과 같다.
 
-	1. Priority
-	2. Non_Blend
-	3. Blend
-	4. UI
+1. Priority
+2. Non_Blend
+3. Blend
+4. UI
 
 ### 1. Priority
 
@@ -124,11 +124,11 @@ Z값을 쓰고 읽어 들여, 객체들이 다른 객체에 가려질 수 있게
 
 {% raw %}
 ```c++
-	RS_LIGHTING = FALSE;
-	RS_CULLMODE = D3DCULL_NONE;
-	RS_ALPHATESTENABLE = TRUE;
-	RS_ALPHAFUNC = D3DCMP_GREATER; // 알파 값이 기준보다 크면 픽셀 렌더링
-	RS_ALPHAREF = 200; // 기준값 설정 (0~255)
+RS_LIGHTING = FALSE;
+RS_CULLMODE = D3DCULL_NONE;
+RS_ALPHATESTENABLE = TRUE;
+RS_ALPHAFUNC = D3DCMP_GREATER; // 알파 값이 기준보다 크면 픽셀 렌더링
+RS_ALPHAREF = 200; // 기준값 설정 (0~255)
 ```
 {% endraw %}
 
@@ -141,32 +141,32 @@ Z값을 쓰고 읽어 들여, 객체들이 다른 객체에 가려질 수 있게
 {% raw %}
 ```c++
 m_RenderObjects[RG_BLEND].sort([cameraTransform](CGameObject* a, CGameObject* b) -> bool {
-					// 입력 유효성 검사 (선택 사항이지만 권장)
-					if (!a || !b) return false; // 혹은 다른 규칙 적용 (예: nullptr을 뒤로 보내기)
-					CTransform* transformA = static_cast<CTransform*>(a->Get_Component(L"Com_Transform"));
-					CTransform* transformB = static_cast<CTransform*>(b->Get_Component(L"Com_Transform"));
-					if (!transformA || !transformB) return false; // 위와 동일
+	// 입력 유효성 검사 (선택 사항이지만 권장)
+	if (!a || !b) return false; // 혹은 다른 규칙 적용 (예: nullptr을 뒤로 보내기)
+	CTransform* transformA = static_cast<CTransform*>(a->Get_Component(L"Com_Transform"));
+	CTransform* transformB = static_cast<CTransform*>(b->Get_Component(L"Com_Transform"));
+	if (!transformA || !transformB) return false; // 위와 동일
 
-					// 각 게임 오브젝트의 월드 위치 가져오기
-					_float3 posA = transformA->Get_State(CTransform::STATE_POSITION);
-					_float3 posB = transformB->Get_State(CTransform::STATE_POSITION);
-					_float3 posC = cameraTransform->Get_State(CTransform::STATE_POSITION);
+	// 각 게임 오브젝트의 월드 위치 가져오기
+	_float3 posA = transformA->Get_State(CTransform::STATE_POSITION);
+	_float3 posB = transformB->Get_State(CTransform::STATE_POSITION);
+	_float3 posC = cameraTransform->Get_State(CTransform::STATE_POSITION);
 
-					// 카메라로부터 각 오브젝트까지의 거리 '제곱' 계산
-					// 제곱 거리를 사용하는 이유: sqrt() 함수 호출보다 훨씬 빠르며, 크기 비교 목적으론 충분함
-					// YourVectorType은 D3DXVECTOR3 또는 사용하는 벡터 라이브러리에 맞춰 변경
+	// 카메라로부터 각 오브젝트까지의 거리 '제곱' 계산
+	// 제곱 거리를 사용하는 이유: sqrt() 함수 호출보다 훨씬 빠르며, 크기 비교 목적으론 충분함
+	// YourVectorType은 D3DXVECTOR3 또는 사용하는 벡터 라이브러리에 맞춰 변경
 
-					_float3 CtoA = posC - posA;
-					_float3 CtoB = posC - posB;
+	_float3 CtoA = posC - posA;
+	_float3 CtoB = posC - posB;
 
-					_float distSqA = D3DXVec3LengthSq(&CtoA); // 아래 Helper 함수 참조
-					_float distSqB = D3DXVec3LengthSq(&CtoB); // 아래 Helper 함수 참조
+	_float distSqA = D3DXVec3LengthSq(&CtoA); // 아래 Helper 함수 참조
+	_float distSqB = D3DXVec3LengthSq(&CtoB); // 아래 Helper 함수 참조
 
-					// back-to-front 정렬: 거리 제곱이 큰 쪽(더 먼 쪽)이 먼저 오도록 함
-					return distSqA > distSqB;
-					// front-to-back 정렬 (가까운 순서)을 원하면: return distSqA < distSqB;
-					});
-			}
+	// back-to-front 정렬: 거리 제곱이 큰 쪽(더 먼 쪽)이 먼저 오도록 함
+	return distSqA > distSqB;
+	// front-to-back 정렬 (가까운 순서)을 원하면: return distSqA < distSqB;
+	});
+}
 ```
 {% endraw %}
 
@@ -181,9 +181,9 @@ m_RenderObjects[RG_BLEND].sort([cameraTransform](CGameObject* a, CGameObject* b)
 
 {% raw %}
 ```c++
-	RS_ALPHABLENDENABLE = TRUE;
-	RS_SRCBLEND = D3DBLEND_SRCALPHA;
-	RS_DESTBLEND = D3DBLEND_INVSRCALPHA;
+RS_ALPHABLENDENABLE = TRUE;
+RS_SRCBLEND = D3DBLEND_SRCALPHA;
+RS_DESTBLEND = D3DBLEND_INVSRCALPHA;
 ```
 {% endraw %}
 
@@ -224,18 +224,22 @@ m_RenderObjects[RG_BLEND].sort([cameraTransform](CGameObject* a, CGameObject* b)
 1. Snow
 2. Hit
 
-BloodStain
+### BloodStain
 
 
 맞은 적의 위치에서 바닥의 높이를 구해서 텍스쳐를 가진 이펙트를 생성했다. 약간의 범위를 지정해서 랜덤으로 오프셋을 지정해주고 변수로 넣은 만큼 반복해서 생성해줬다.
 
-1. Hit
+
+### Hit
+
 
 총알이 투사체가 아니기때문에, 눈으로 볼수가 없어, 벽에 맞았을 경우 맞았다고 판단된 벽 위에 이펙트를 생성하고 애니메이션을 재생했다.
 
-1. Staff Bullet
 
- 스태프로 쏘는 투사체에는 잔상을 재현하기 위해 꼬리가 달려있었는데 이를 표현하기 위해서 투사체의 진행방향의 뒷쪽으로 항상 따라다니는 로컬 좌표의 점을 하나 찍어서 진행방향과 업벡터를 외적하여 양옆의 점을 구하고 이를 통하여 quad
+### Staff Bullet
+
+
+ 스태프로 쏘는 투사체에는 잔상을 재현하기 위해 꼬리가 달려있었는데 이를 표현하기 위해서 투사체의 진행 방향의 뒷 쪽으로 항상 따라다니는 로컬 좌표의 점을 하나 찍어서 진행 방향과 업 벡터를 외적하여 양옆의 점을 구하고 이를 통하여 Quad를 그려서 표현했습니다. 
 
 1. BulletShell
 2. Blood
@@ -256,4 +260,3 @@ Sound Listner, Sound Source, Sound Manager, Sound Event 등을 사용하여 FMOD
 
 1. 인스턴싱(파티클 최적화)
 2. 쉐이더 후처리(블룸효과, Deferred Shading)
-3. 
