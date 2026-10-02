@@ -223,14 +223,25 @@ td {
 
 .wrapper{
     max-width: 1080px;
+    width: 100%;
+    padding: 0 16px;
     margin: auto;
     align-items: start;
     display: grid;
     height: 100%;
-    grid-template-areas: 'article article aside'
-    'comment comment aside'
-    'button button aside';
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 24px;
+    grid-template-areas: 'article aside'
+    'comment aside'
+    'button aside';
     margin-bottom: 150px;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: 'article' 'aside' 'comment' 'button';
+    }
 }
 
 .portfolio-container{

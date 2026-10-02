@@ -1,9 +1,13 @@
-Recent Posts:
+<section class="recent-posts" aria-label="Recent Posts">
+<div>Recent Posts:</div>
+<ul>
 {% for post in site.posts limit: 5 %}
 {% if post.category != empty %}
     <li>
-        <a style="text-decoration:none; color: #aaa;" href="{{post.category}}">{{post.category}}/</a> 
+        <a href="{{ post.category | prepend: '/' | relative_url }}">{{post.category}}/</a>
         <a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{post.date |  date: "%m/%d/%Y"}}</span>
     </li>
 {% endif %}
 {% endfor %}
+</ul>
+</section>

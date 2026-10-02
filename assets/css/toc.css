@@ -18,6 +18,34 @@ aside{
     align-self: start;
     top: 100px;
     grid-area: aside;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.recent-posts ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.25rem;
+}
+
+.recent-posts li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.recent-posts .date {
+    display: block;
+    padding-left: 0;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper > aside {
+        position: static;
+    }
+
+    .section-nav {
+        max-width: none;
+    }
 }
 
 h2, h3, h4, h5, h6 {

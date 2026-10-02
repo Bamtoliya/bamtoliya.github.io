@@ -16,7 +16,7 @@ a:hover{
     margin-top: 10px;
 }
 
-#date {
+.post-date {
     text-align: right;
     font-size: 14px;
     color: grey;
@@ -90,8 +90,9 @@ a:hover{
     color: brown;
     text-decoration: underline;
   }
-  min-width: 720px;
-  max-width: 720px;
+  min-width: 0;
+  width: 100%;
+  overflow-wrap: anywhere;
   min-height: 600px;
   grid-area: article;
 }
@@ -99,6 +100,7 @@ a:hover{
 
 
 .comment{
+  min-width: 0;
   grid-area: comment;
 }
 
@@ -184,8 +186,8 @@ a:hover{
 }
 
 .button-box{
-  min-width: 720px;
-  max-width: 720px;
+  min-width: 0;
+  width: 100%;
   margin: auto;
   text-align: center;
   grid-area: button;
@@ -201,20 +203,50 @@ a:hover{
   color: Green;
 }
 
-.highlighter-rouge {
+.article_box :not(pre) > code {
+  display: inline;
+  color: #ce887b;
+  background-color: #333;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-family: monospace;
+  font-size: 0.9em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.article_box div.highlighter-rouge {
   color: #ce887b;
   font-weight: 400;
   border: 1px solid #666;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.1rem 0.5rem;
-  overflow-x: auto;
   background-color: #333;
-  display: grid;
+  margin: 1rem 0;
+  min-width: 0;
 }
 
-.highlight{
+.article_box .highlight{
   background-color: #333;
+}
+
+.article_box pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem;
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.article_box .highlight pre {
+  margin: 0;
+}
+
+.article_box pre code {
+  font-family: monospace;
 }
 
 img{
