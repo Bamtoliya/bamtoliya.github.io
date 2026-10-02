@@ -1,4 +1,5 @@
 name: "Build and Deploy"
+run-name: ${{ github.event.client_payload.publisher_request_id && format('BamOwl publish {0}', github.event.client_payload.publisher_request_id) || 'Build and Deploy' }}
 on:
   push:
     branches:

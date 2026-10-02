@@ -28,6 +28,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.bamowl.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  bamtoliya
 
+# Public URL of the Cloudflare publisher Worker; no secret belongs here.
+publisher_url: "https://bamowl-notion-publisher.bamowl-notion-publisher.workers.dev"
+
 # Build settings
 theme: minima
 plugins:
@@ -73,6 +76,6 @@ tipue_search:
        pages: false
        collections: []
    exclude:
-       files: [search.html, index.html, tags.html]
+       files: [search.html, index.html, tags.html, publish.html]
        categories: []
        tags: []

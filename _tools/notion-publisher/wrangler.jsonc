@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bamowl-notion-publisher",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    "GITHUB_OWNER": "Bamtoliya",
+    "GITHUB_REPO": "bamtoliya.github.io",
+    "WORKFLOW_FILE": "pages-deploy.yml",
+    "DISPATCH_EVENT": "RUN_WORKFLOW_DISPATCH",
+    "BLOG_URL": "https://www.bamowl.com",
+    "GITHUB_CLIENT_ID": "Ov23li23buQm1qVX6ftn"
+  },
+  "ratelimits": [{
+    "name": "REQUEST_LIMITER",
+    "namespace_id": "817304",
+    "simple": { "limit": 30, "period": 60 }
+  }],
+  "durable_objects": {
+    "bindings": [{ "name": "PUBLISH_GATE", "class_name": "PublishGate" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PublishGate"] }]
+}
