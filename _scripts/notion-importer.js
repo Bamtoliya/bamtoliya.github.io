@@ -111,8 +111,8 @@ tags: [${fmtags}]
 `
 		const mdblocks = await n2m.pageToMarkdown(id);
 		let md = n2m.toMarkdownString(mdblocks)["parent"];
-		if(md == "") {
-			continue;
+		if (!md || typeof md !== "string" || md.trim() === "") {
+    		continue;
 		}
 
 		md = escapeCodeBlock(md);
