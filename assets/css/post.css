@@ -81,6 +81,11 @@ a:hover{
 .article_box{
   & p {
     padding: 3px;
+    margin: 0.75em 0;
+    line-height: 1.8;
+  }
+  & li, & blockquote {
+    line-height: 1.8;
   }
   & a {
     text-decoration: none;
@@ -234,6 +239,7 @@ a:hover{
 
 .article_box pre {
   max-width: 100%;
+  line-height: 1.6;
   overflow-x: auto;
   padding: 0.5rem;
   white-space: pre;
