@@ -12,8 +12,8 @@ robots: noindex,nofollow
   <meta name="robots" content="noindex,nofollow">
   <meta name="referrer" content="no-referrer">
   <title>BamOwl · 블로그 발행</title>
-  <link rel="stylesheet" href="{{ '/assets/css/publisher.css' | relative_url }}">
-  <script src="{{ '/assets/js/publisher-embed.js' | relative_url }}" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/publisher.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script src="{{ '/assets/js/publisher-embed.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 <body>
   <main class="publisher-widget" data-worker="{{ site.publisher_url | escape }}">
