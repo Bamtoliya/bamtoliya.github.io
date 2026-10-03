@@ -97,6 +97,7 @@ a:hover{
   }
   min-width: 0;
   width: 100%;
+  word-break: keep-all;
   overflow-wrap: anywhere;
   min-height: 600px;
   grid-area: article;
