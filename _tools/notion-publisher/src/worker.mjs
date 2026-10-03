@@ -78,6 +78,18 @@ function widgetOrigin(env) {
   return url.origin;
 }
 
+function allowedWidgetOrigin(request, env) {
+  const origins = new Set([widgetOrigin(env)]);
+  for (const value of (env.WIDGET_ORIGINS || '').split(',').filter(Boolean)) {
+    const url = new URL(value.trim());
+    if (url.protocol !== 'https:') throw new HttpError(503, '발행 페이지 주소 설정을 확인하세요.');
+    origins.add(url.origin);
+  }
+  const origin = request.headers.get('Origin');
+  if (!origins.has(origin)) throw new HttpError(403, '허용되지 않은 발행 페이지입니다.');
+  return origin;
+}
+
 function bearer(request) { return request.headers.get('Authorization')?.match(/^Bearer (\S+)$/)?.[1]; }
 
 async function digest(value) {
@@ -191,8 +203,8 @@ export function createHandler({ fetchRemote = fetch } = {}) {
         }
         const embedded = embedPaths.has(url.pathname);
         if (embedded) {
-          if (request.headers.get('Origin') !== widgetOrigin(env)) throw new HttpError(403, '허용되지 않은 발행 페이지입니다.');
-          cors = { 'Access-Control-Allow-Origin': widgetOrigin(env), Vary: 'Origin' };
+          const origin = allowedWidgetOrigin(request, env);
+          cors = { 'Access-Control-Allow-Origin': origin, Vary: 'Origin' };
           if (request.method === 'OPTIONS') {
             if (request.headers.get('Access-Control-Request-Method') !== 'POST') throw new HttpError(405, '허용되지 않은 요청 방식입니다.');
             return new Response(null, { status: 204, headers: { ...securityHeaders, ...cors,

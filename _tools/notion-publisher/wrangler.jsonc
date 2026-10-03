@@ -11,6 +11,7 @@
     "WORKFLOW_FILE": "pages-deploy.yml",
     "DISPATCH_EVENT": "RUN_WORKFLOW_DISPATCH",
     "BLOG_URL": "https://www.bamowl.com",
+    "WIDGET_ORIGINS": "https://bamowl.com",
     "GITHUB_CLIENT_ID": "Ov23li23buQm1qVX6ftn"
   },
   "ratelimits": [{

@@ -63,7 +63,7 @@ npm run dev
 - 발행과 상태 확인 때마다 OAuth 토큰으로 로그인 계정을 재확인. 만료·철회된 로그인은 거부.
 - OAuth state와 PKCE 검사, 암호화된 `HttpOnly; Secure; SameSite=Lax` 쿠키, 최대 1시간 세션. 쿠키를 사용하는 POST는 Origin과 CSRF를 검사.
 - 위젯은 256비트 무작위 연결 비밀값을 메모리에 생성. 팝업 URL에는 SHA-256 해시만 전달. Durable Object에 암호화된 세션을 10분 동안 보관하고 비밀값을 보유한 위젯에 한 번만 전달. 팝업의 명시적 연결 승인 전에는 세션을 전달하지 않음.
-- 임베드 API는 `BLOG_URL`의 고정된 HTTPS Origin만 허용하고, 별도 용도로 암호화된 발행 세션을 Authorization 헤더로 검사. GitHub OAuth 토큰이나 PAT를 위젯 코드 또는 URL에 노출하지 않음.
+- 임베드 API는 `BLOG_URL`과 `WIDGET_ORIGINS`에 명시한 고정된 HTTPS Origin만 허용하고, 별도 용도로 암호화된 발행 세션을 Authorization 헤더로 검사. 현재 `www.bamowl.com`에서 `bamowl.com`으로 이동하므로 두 주소를 허용. 다른 호스트·임의 하위 도메인·`null` Origin은 거부. GitHub OAuth 토큰이나 PAT를 위젯 코드 또는 URL에 노출하지 않음.
 - IP 기준 분당 30회 제한은 Cloudflare 지역별 근사 제한. Worker 호출량 자체를 막는 전역 한도나 청구액 상한이 아님. 공유 IP에서는 정상 사용도 제한될 수 있음.
 - 무료 SQLite Durable Object가 저장소 단위 발행 요청을 60초 동안 직렬화. 기존 워크플로가 실행 중일 때도 새 발행을 거부. 통신 실패 시 이미 요청이 접수되었을 수 있으므로 자동 재발행하지 않음.
 - 자신의 요청 UUID와 워크플로 `display_title`이 정확히 일치할 때만 완료로 표시. 상태 확인은 10초 간격, 최대 20분. 이후 GitHub 작업 기록에서 직접 확인.

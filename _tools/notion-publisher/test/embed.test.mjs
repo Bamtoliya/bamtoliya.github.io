@@ -8,7 +8,7 @@ const proof = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const channel = Buffer.from(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(proof))).toString('base64url');
 const env = {
   GITHUB_OWNER: 'Bamtoliya', GITHUB_REPO: 'bamtoliya.github.io', WORKFLOW_FILE: 'pages-deploy.yml',
-  DISPATCH_EVENT: 'RUN_WORKFLOW_DISPATCH', BLOG_URL: blog,
+  DISPATCH_EVENT: 'RUN_WORKFLOW_DISPATCH', BLOG_URL: blog, WIDGET_ORIGINS: 'https://bamowl.com',
   GITHUB_CLIENT_ID: 'test-client-id', GITHUB_CLIENT_SECRET: 'test-client-secret',
   GITHUB_TOKEN: 'test-dispatch-token', SESSION_SECRET: 'test-only-secret-with-at-least-thirty-two-characters',
   REQUEST_LIMITER: { limit: async () => ({ success: true }) },
@@ -91,6 +91,28 @@ test('cookie sessions, forged tokens and expired embed sessions cannot authorize
     assert.equal((await s.handler.fetch(widget('publish', value), s.config)).status, 401);
   }
   assert.equal(s.calls.length, 0);
+});
+
+test('canonical apex redirects preserve pairing while unlisted origins stay denied', async () => {
+  const s = setup(); const connected = await cachedLogin(s);
+  await approve(s, connected);
+  const preflight = await s.handler.fetch(new Request(origin + '/api/embed/claim', {
+    method: 'OPTIONS', headers: { Origin: 'https://bamowl.com', 'Access-Control-Request-Method': 'POST' }
+  }), s.config);
+  assert.equal(preflight.status, 204);
+  assert.equal(preflight.headers.get('Access-Control-Allow-Origin'), 'https://bamowl.com');
+  // The handoff may have been created before the alias was allowed. It must
+  // remain usable after changing only the CORS configuration.
+  const claimed = await s.handler.fetch(widget('claim', proof, 'https://bamowl.com'), s.config);
+  assert.equal(claimed.status, 200);
+  const { session } = await claimed.json();
+  assert.equal((await s.handler.fetch(widget('session', session, 'https://bamowl.com'), s.config)).status, 200);
+  assert.equal((await s.handler.fetch(widget('publish', session, 'https://bamowl.com'), s.config)).status, 202);
+  for (const forbidden of ['https://attacker.bamowl.com', 'http://bamowl.com', 'null']) {
+    const response = await s.handler.fetch(widget('publish', session, forbidden), s.config);
+    assert.equal(response.status, 403);
+    assert.equal(response.headers.get('Access-Control-Allow-Origin'), null);
+  }
 });
 
 test('an existing owner login needs explicit popup confirmation before its session can be claimed', async () => {
