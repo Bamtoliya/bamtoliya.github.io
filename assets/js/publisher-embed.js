@@ -3,7 +3,7 @@
   const get = id => document.getElementById(id);
   const widget = document.querySelector('.publisher-widget');
   let worker, session = '', verifier = '', timer, requestId = '', started = 0;
-  let loginStarted = 0, generation = 0, popup, account = '', busy = false;
+  let loginStarted = 0, generation = 0, popup, pairing, account = '', busy = false;
   const status = text => { get('status').textContent = text; };
   const hideLoginLinks = () => { get('login-link').hidden = true; get('cancel').hidden = true; };
   const base64 = bytes => btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
@@ -23,9 +23,15 @@
   }
 
   function signedOut(message) {
-    generation++; clearTimeout(timer); session = ''; verifier = ''; account = ''; busy = false;
+    generation++; clearTimeout(timer); session = ''; verifier = ''; pairing = null; account = ''; busy = false;
     hideLoginLinks(); get('disconnect').hidden = true;
-    get('action').disabled = false; get('action').textContent = 'GitHub 로그인'; status(message);
+    get('action').disabled = true; get('action').textContent = 'GitHub 로그인'; status(message);
+    const attempt = generation;
+    const proof = base64(crypto.getRandomValues(new Uint8Array(32)));
+    crypto.subtle.digest('SHA-256', new TextEncoder().encode(proof)).then(hash => {
+      if (attempt !== generation) return;
+      pairing = { proof, channel: base64(new Uint8Array(hash)) }; get('action').disabled = false;
+    }).catch(() => { if (attempt === generation) status('로그인 연결을 준비하지 못했습니다. 페이지를 새로고침해 주세요.'); });
   }
 
   function ready(message) {
@@ -50,21 +56,20 @@
   }
 
   async function login() {
+    if (!pairing) return;
     busy = true; get('action').disabled = true; get('action').textContent = 'GitHub 연결 중';
     status('인증 창에서 로그인 후 “Notion 버튼 연결”을 눌러 주세요.');
     const attempt = ++generation;
-    verifier = base64(crypto.getRandomValues(new Uint8Array(32)));
-    // Open synchronously in the click handler to preserve popup permission.
-    try { popup = window.open('about:blank', '_blank', 'popup,width=520,height=680'); } catch { popup = null; }
+    verifier = pairing.proof;
+    const target = worker + '/auth/login?bridge=' + encodeURIComponent(pairing.channel);
+    pairing = null;
+    // Open the actual auth URL synchronously. This also works when the native
+    // Notion app sends URLs to an external browser instead of a JS popup.
+    try { popup = window.open(target, '_blank', 'popup,width=520,height=680'); } catch { popup = null; }
     get('cancel').hidden = false;
     try {
-      const hash = base64(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier))));
-      if (attempt !== generation) return;
-      const target = worker + '/auth/login?bridge=' + encodeURIComponent(hash);
       get('login-link').href = target; get('login-link').hidden = false;
-      if (popup) {
-        try { popup.location.href = target; } catch { status('아래 “로그인 창 열기”로 인증을 진행해 주세요.'); }
-      } else { status('아래 “로그인 창 열기”로 인증을 진행해 주세요.'); }
+      if (!popup) status('아래 “로그인 창 열기”로 인증을 진행해 주세요.');
       // OAuth COOP or Notion's desktop app can separate the popup from the
       // iframe. Only the verifier can claim; opener/postMessage is not needed.
       loginStarted = Date.now(); await claim(attempt);
