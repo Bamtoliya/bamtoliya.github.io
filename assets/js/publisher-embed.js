@@ -55,7 +55,7 @@
     const attempt = ++generation;
     verifier = base64(crypto.getRandomValues(new Uint8Array(32)));
     // Open synchronously in the click handler to preserve popup permission.
-    popup = window.open('about:blank', '_blank', 'popup,width=520,height=680');
+    try { popup = window.open('about:blank', '_blank', 'popup,width=520,height=680'); } catch { popup = null; }
     get('cancel').hidden = false;
     try {
       const hash = base64(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier))));

@@ -11,6 +11,7 @@ const env = {
   GITHUB_CLIENT_ID: 'test-client-id', GITHUB_CLIENT_SECRET: 'test-client-secret',
   GITHUB_TOKEN: 'test-dispatch-token', SESSION_SECRET: 'test-only-secret-with-at-least-thirty-two-characters',
   REQUEST_LIMITER: { limit: async () => ({ success: true }) },
+  LOGIN_BRIDGE: {},
   PUBLISH_GATE: { idFromName: value => value, get: () => ({ fetch: async () => new Response(null, { status: 204 }) }) }
 };
 const uuid = 'f353887c-10dc-46f2-9775-53cf392a1b16';
