@@ -237,6 +237,7 @@ a:hover{
   overflow-x: auto;
   padding: 0.5rem;
   white-space: pre;
+  tab-size: 4;
   overflow-wrap: normal;
   word-break: normal;
 }
