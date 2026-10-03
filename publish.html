@@ -1,21 +1,30 @@
 ---
-layout: default
+layout: null
 title: 블로그 발행
 permalink: /publish/
 robots: noindex,nofollow
 ---
-<link rel="stylesheet" href="{{ '/assets/css/publisher.css' | relative_url }}">
-<main class="publisher">
-  <div class="publisher-brand">BAMOWL <span>PUBLISHER</span></div>
-  <h1>작성한 글을<br>블로그로.</h1>
-  <p>Notion에서 공개로 표시한 새 글과 변경된 글을 블로그에 반영합니다.</p>
-  <div class="publisher-panel">
-    {% if site.publisher_url and site.publisher_url != '' %}
-      <a class="publisher-button" href="{{ site.publisher_url | escape }}" target="_blank" rel="noopener noreferrer">GitHub 로그인 후 발행</a>
-      <p>새 창에서 GitHub 계정을 확인합니다.<br>저장소 소유자만 발행할 수 있습니다.</p>
-    {% else %}
-      <button class="publisher-button" type="button" disabled>발행 서버 연결 준비 중</button>
-      <p>연결이 완료되면 이곳에서 블로그를 발행할 수 있습니다.</p>
-    {% endif %}
-  </div>
-</main>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>BamOwl · 블로그 발행</title>
+  <link rel="stylesheet" href="{{ '/assets/css/publisher.css' | relative_url }}">
+  <script src="{{ '/assets/js/publisher-embed.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <main class="publisher-widget" data-worker="{{ site.publisher_url | escape }}">
+    <button id="action" class="publisher-button" type="button" disabled>GitHub 로그인</button>
+    <p id="status" role="status" aria-live="polite">발행 버튼을 준비하고 있습니다.</p>
+    <div class="publisher-links">
+      <a id="login-link" target="_blank" rel="noopener noreferrer" hidden>로그인 창 열기</a>
+      <a id="run" target="_blank" rel="noopener noreferrer" hidden>작업 기록</a>
+      <button id="cancel" type="button" hidden>연결 취소</button>
+      <button id="disconnect" type="button" hidden>연결 해제</button>
+    </div>
+  </main>
+</body>
+</html>

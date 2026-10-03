@@ -19,7 +19,13 @@
     "simple": { "limit": 30, "period": 60 }
   }],
   "durable_objects": {
-    "bindings": [{ "name": "PUBLISH_GATE", "class_name": "PublishGate" }]
+    "bindings": [
+      { "name": "PUBLISH_GATE", "class_name": "PublishGate" },
+      { "name": "LOGIN_BRIDGE", "class_name": "LoginBridge" }
+    ]
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PublishGate"] }]
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["PublishGate"] },
+    { "tag": "v2", "new_sqlite_classes": ["LoginBridge"] }
+  ]
 }
